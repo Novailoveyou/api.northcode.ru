@@ -35,6 +35,28 @@
       "targetField": "title",
       "required": true
     },
+    "description": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.text",
+      "repeatable": true,
+      "required": true
+    },
+    "icon": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.media",
+      "repeatable": false,
+      "required": true
+    },
     "seo": {
       "type": "component",
       "pluginOptions": {
