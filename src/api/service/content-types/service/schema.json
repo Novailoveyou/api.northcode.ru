@@ -33,7 +33,6 @@
         }
       },
       "components": [
-        "widgets.services-directory",
         "widgets.services",
         "widgets.more-services",
         "widgets.call-to-action",

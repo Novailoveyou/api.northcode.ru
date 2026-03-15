@@ -378,15 +378,6 @@ export interface WidgetsServices extends Struct.ComponentSchema {
   attributes: {};
 }
 
-export interface WidgetsServicesDirectory extends Struct.ComponentSchema {
-  collectionName: 'components_widgets_services_directories';
-  info: {
-    displayName: 'ServicesDirectory';
-    icon: 'rocket';
-  };
-  attributes: {};
-}
-
 export interface WidgetsTechnologies extends Struct.ComponentSchema {
   collectionName: 'components_widgets_technologies';
   info: {
@@ -474,7 +465,6 @@ declare module '@strapi/strapi' {
       'widgets.service-products': WidgetsServiceProducts;
       'widgets.service-testimonials': WidgetsServiceTestimonials;
       'widgets.services': WidgetsServices;
-      'widgets.services-directory': WidgetsServicesDirectory;
       'widgets.technologies': WidgetsTechnologies;
       'widgets.terms': WidgetsTerms;
       'widgets.trusted-by': WidgetsTrustedBy;
