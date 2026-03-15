@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "abouts",
   "info": {
-    "singularName": "home",
-    "pluralName": "homes",
-    "displayName": "Home"
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About"
   },
   "options": {
     "draftAndPublish": true
@@ -33,25 +33,25 @@
         }
       },
       "components": [
-        "widgets.home-hero",
-        "widgets.projects",
-        "widgets.services",
-        "widgets.how-are-we-different",
-        "widgets.how-we-work",
-        "widgets.call-to-action-question",
-        "widgets.technologies",
-        "widgets.reviews",
-        "widgets.trusted-by",
-        "widgets.fa-q",
-        "widgets.lead-form-section",
-        "widgets.why-work-with-us",
+        "widgets.primary-hero",
         "widgets.who-we-are",
-        "widgets.our-approach",
-        "widgets.more-services",
         "widgets.meet-the-team",
-        "widgets.call-to-action",
+        "widgets.our-approach",
+        "widgets.why-work-with-us",
+        "widgets.trusted-by",
+        "widgets.technologies",
+        "widgets.services",
+        "widgets.reviews",
+        "widgets.projects",
+        "widgets.more-services",
+        "widgets.lead-form-section",
+        "widgets.how-we-work",
+        "widgets.how-are-we-different",
+        "widgets.fa-q",
         "widgets.certified-it-company",
-        "widgets.call-to-action-testimonials"
+        "widgets.call-to-action",
+        "widgets.call-to-action-testimonials",
+        "widgets.call-to-action-question"
       ]
     }
   }
