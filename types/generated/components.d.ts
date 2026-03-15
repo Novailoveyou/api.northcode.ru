@@ -1,5 +1,23 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FeaturesLeadForm extends Struct.ComponentSchema {
+  collectionName: 'components_features_lead_forms';
+  info: {
+    displayName: 'LeadForm';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface FeaturesQuiz extends Struct.ComponentSchema {
+  collectionName: 'components_features_quizzes';
+  info: {
+    displayName: 'Quiz';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -62,14 +80,411 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface WidgetsBlogArticle extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_blog_articles';
+  info: {
+    displayName: 'BlogArticle';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsBlogArticlesDirectory extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_blog_articles_directories';
+  info: {
+    displayName: 'BlogArticlesDirectory';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsBlogHero extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_blog_heroes';
+  info: {
+    displayName: 'BlogHero';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsBlogPosts extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_blog_posts';
+  info: {
+    displayName: 'BlogPosts';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsBusinessProblems extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_business_problems';
+  info: {
+    displayName: 'BusinessProblems';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsCallToAction extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_call_to_actions';
+  info: {
+    displayName: 'CallToAction';
+  };
+  attributes: {};
+}
+
+export interface WidgetsCallToActionQuestion extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_call_to_action_questions';
+  info: {
+    displayName: 'CallToActionQuestion';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsCallToActionTestimonials
+  extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_call_to_action_testimonials';
+  info: {
+    displayName: 'CallToActionTestimonials';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsCertifiedItCompany extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_certified_it_companies';
+  info: {
+    displayName: 'CertifiedITCompany';
+  };
+  attributes: {};
+}
+
+export interface WidgetsConsent extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_consents';
+  info: {
+    displayName: 'Consent';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsContact extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_contacts';
+  info: {
+    displayName: 'Contact';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsFaQ extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_fa_qs';
+  info: {
+    displayName: 'FaQ';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsHomeHero extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_home_heroes';
+  info: {
+    displayName: 'HomeHero';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsHowAreWeDifferent extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_how_are_we_differents';
+  info: {
+    displayName: 'HowAreWeDifferent';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsHowSystemLooks extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_how_system_looks';
+  info: {
+    displayName: 'HowSystemLooks';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsHowWeWork extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_how_we_works';
+  info: {
+    displayName: 'HowWeWork';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsIntegrationProcess extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_integration_processes';
+  info: {
+    displayName: 'IntegrationProcess';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsLeadFormSection extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_lead_form_sections';
+  info: {
+    displayName: 'LeadFormSection';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_meet_the_teams';
+  info: {
+    displayName: 'MeetTheTeam';
+  };
+  attributes: {};
+}
+
+export interface WidgetsMoreServices extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_more_services';
+  info: {
+    displayName: 'MoreServices';
+  };
+  attributes: {};
+}
+
+export interface WidgetsOurApproach extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_our_approaches';
+  info: {
+    displayName: 'OurApproach';
+  };
+  attributes: {};
+}
+
+export interface WidgetsPrimaryHero extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_primary_heroes';
+  info: {
+    displayName: 'PrimaryHero';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsPrivacy extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_privacies';
+  info: {
+    displayName: 'Privacy';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsProjects extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_projects';
+  info: {
+    displayName: 'Projects';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsReviews extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_reviews';
+  info: {
+    displayName: 'Reviews';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsSectionHeroAiAgents extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_section_hero_ai_agents';
+  info: {
+    displayName: 'SectionHeroAIAgents';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsSectionHeroCrmAutomation
+  extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_section_hero_crm_automations';
+  info: {
+    displayName: 'SectionHeroCRMAutomation';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsSectionHeroCustomErp extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_section_hero_custom_erps';
+  info: {
+    displayName: 'SectionHeroCustomERP';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsSectionHeroWebPlatforms extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_section_hero_web_platforms';
+  info: {
+    displayName: 'SectionHeroWebPlatforms';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsServiceHeroMessengerApps
+  extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_service_hero_messenger_apps';
+  info: {
+    displayName: 'ServiceHeroMessengerApps';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsServiceHeroMobileApps extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_service_hero_mobile_apps';
+  info: {
+    displayName: 'ServiceHeroMobileApps';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsServiceProducts extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_service_products';
+  info: {
+    displayName: 'ServiceProducts';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsServiceTestimonials extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_service_testimonials';
+  info: {
+    displayName: 'ServiceTestimonials';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsServices extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_services';
+  info: {
+    displayName: 'Services';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsServicesDirectory extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_services_directories';
+  info: {
+    displayName: 'ServicesDirectory';
+  };
+  attributes: {};
+}
+
+export interface WidgetsTechnologies extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_technologies';
+  info: {
+    displayName: 'Technologies';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsTerms extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_terms';
+  info: {
+    displayName: 'Terms';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsTrustedBy extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_trusted_bies';
+  info: {
+    displayName: 'TrustedBy';
+    icon: 'alien';
+  };
+  attributes: {};
+}
+
+export interface WidgetsWhoWeAre extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_who_we_ares';
+  info: {
+    displayName: 'WhoWeAre';
+  };
+  attributes: {};
+}
+
+export interface WidgetsWhyWorkWithUs extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_why_work_withuses';
+  info: {
+    displayName: 'WhyWorkWithUs';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'features.lead-form': FeaturesLeadForm;
+      'features.quiz': FeaturesQuiz;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'widgets.blog-article': WidgetsBlogArticle;
+      'widgets.blog-articles-directory': WidgetsBlogArticlesDirectory;
+      'widgets.blog-hero': WidgetsBlogHero;
+      'widgets.blog-posts': WidgetsBlogPosts;
+      'widgets.business-problems': WidgetsBusinessProblems;
+      'widgets.call-to-action': WidgetsCallToAction;
+      'widgets.call-to-action-question': WidgetsCallToActionQuestion;
+      'widgets.call-to-action-testimonials': WidgetsCallToActionTestimonials;
+      'widgets.certified-it-company': WidgetsCertifiedItCompany;
+      'widgets.consent': WidgetsConsent;
+      'widgets.contact': WidgetsContact;
+      'widgets.fa-q': WidgetsFaQ;
+      'widgets.home-hero': WidgetsHomeHero;
+      'widgets.how-are-we-different': WidgetsHowAreWeDifferent;
+      'widgets.how-system-looks': WidgetsHowSystemLooks;
+      'widgets.how-we-work': WidgetsHowWeWork;
+      'widgets.integration-process': WidgetsIntegrationProcess;
+      'widgets.lead-form-section': WidgetsLeadFormSection;
+      'widgets.meet-the-team': WidgetsMeetTheTeam;
+      'widgets.more-services': WidgetsMoreServices;
+      'widgets.our-approach': WidgetsOurApproach;
+      'widgets.primary-hero': WidgetsPrimaryHero;
+      'widgets.privacy': WidgetsPrivacy;
+      'widgets.projects': WidgetsProjects;
+      'widgets.reviews': WidgetsReviews;
+      'widgets.section-hero-ai-agents': WidgetsSectionHeroAiAgents;
+      'widgets.section-hero-crm-automation': WidgetsSectionHeroCrmAutomation;
+      'widgets.section-hero-custom-erp': WidgetsSectionHeroCustomErp;
+      'widgets.section-hero-web-platforms': WidgetsSectionHeroWebPlatforms;
+      'widgets.service-hero-messenger-apps': WidgetsServiceHeroMessengerApps;
+      'widgets.service-hero-mobile-apps': WidgetsServiceHeroMobileApps;
+      'widgets.service-products': WidgetsServiceProducts;
+      'widgets.service-testimonials': WidgetsServiceTestimonials;
+      'widgets.services': WidgetsServices;
+      'widgets.services-directory': WidgetsServicesDirectory;
+      'widgets.technologies': WidgetsTechnologies;
+      'widgets.terms': WidgetsTerms;
+      'widgets.trusted-by': WidgetsTrustedBy;
+      'widgets.who-we-are': WidgetsWhoWeAre;
+      'widgets.why-work-with-us': WidgetsWhyWorkWithUs;
     }
   }
 }

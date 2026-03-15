@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_widgets_integration_processes",
+  "info": {
+    "displayName": "IntegrationProcess",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

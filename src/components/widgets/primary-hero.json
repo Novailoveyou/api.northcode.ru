@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_widgets_primary_heroes",
+  "info": {
+    "displayName": "PrimaryHero",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

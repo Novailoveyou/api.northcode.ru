@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_widgets_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}

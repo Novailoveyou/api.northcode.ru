@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_widgets_trusted_bies",
+  "info": {
+    "displayName": "TrustedBy",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}
