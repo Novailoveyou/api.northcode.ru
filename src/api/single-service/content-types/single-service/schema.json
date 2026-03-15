@@ -70,7 +70,29 @@
         "widgets.integration-process",
         "widgets.trusted-by",
         "widgets.reviews",
-        "widgets.fa-q"
+        "widgets.fa-q",
+        "widgets.why-work-with-us",
+        "widgets.who-we-are",
+        "widgets.terms",
+        "widgets.technologies",
+        "widgets.services",
+        "widgets.services-directory",
+        "widgets.projects",
+        "widgets.privacy",
+        "widgets.primary-hero",
+        "widgets.our-approach",
+        "widgets.more-services",
+        "widgets.meet-the-team",
+        "widgets.how-we-work",
+        "widgets.how-are-we-different",
+        "widgets.home-hero",
+        "widgets.contact",
+        "widgets.consent",
+        "widgets.certified-it-company",
+        "widgets.blog-posts",
+        "widgets.blog-hero",
+        "widgets.blog-articles-directory",
+        "widgets.blog-article"
       ]
     }
   }

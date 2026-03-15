@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_who_we_ares",
   "info": {
-    "displayName": "WhoWeAre"
+    "displayName": "WhoWeAre",
+    "icon": "information"
   },
   "options": {},
   "attributes": {},

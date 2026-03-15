@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_our_approaches",
   "info": {
-    "displayName": "OurApproach"
+    "displayName": "OurApproach",
+    "icon": "information"
   },
   "options": {},
   "attributes": {},

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_services_directories",
   "info": {
-    "displayName": "ServicesDirectory"
+    "displayName": "ServicesDirectory",
+    "icon": "rocket"
   },
   "options": {},
   "attributes": {},

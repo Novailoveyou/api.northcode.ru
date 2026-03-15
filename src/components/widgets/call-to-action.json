@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_call_to_actions",
   "info": {
-    "displayName": "CallToAction"
+    "displayName": "CallToAction",
+    "icon": "alien"
   },
   "options": {},
   "attributes": {},

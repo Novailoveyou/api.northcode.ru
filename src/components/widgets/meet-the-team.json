@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_meet_the_teams",
   "info": {
-    "displayName": "MeetTheTeam"
+    "displayName": "MeetTheTeam",
+    "icon": "information"
   },
   "options": {},
   "attributes": {},

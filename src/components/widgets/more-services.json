@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_more_services",
   "info": {
-    "displayName": "MoreServices"
+    "displayName": "MoreServices",
+    "icon": "rocket"
   },
   "options": {},
   "attributes": {},

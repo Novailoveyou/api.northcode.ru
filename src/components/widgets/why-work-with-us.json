@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_why_work_withuses",
   "info": {
-    "displayName": "WhyWorkWithUs"
+    "displayName": "WhyWorkWithUs",
+    "icon": "alien"
   },
   "options": {},
   "attributes": {},

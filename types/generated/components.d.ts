@@ -84,7 +84,7 @@ export interface WidgetsBlogArticle extends Struct.ComponentSchema {
   collectionName: 'components_widgets_blog_articles';
   info: {
     displayName: 'BlogArticle';
-    icon: 'alien';
+    icon: 'book';
   };
   attributes: {};
 }
@@ -93,7 +93,7 @@ export interface WidgetsBlogArticlesDirectory extends Struct.ComponentSchema {
   collectionName: 'components_widgets_blog_articles_directories';
   info: {
     displayName: 'BlogArticlesDirectory';
-    icon: 'alien';
+    icon: 'book';
   };
   attributes: {};
 }
@@ -102,7 +102,7 @@ export interface WidgetsBlogHero extends Struct.ComponentSchema {
   collectionName: 'components_widgets_blog_heroes';
   info: {
     displayName: 'BlogHero';
-    icon: 'alien';
+    icon: 'book';
   };
   attributes: {};
 }
@@ -111,7 +111,7 @@ export interface WidgetsBlogPosts extends Struct.ComponentSchema {
   collectionName: 'components_widgets_blog_posts';
   info: {
     displayName: 'BlogPosts';
-    icon: 'alien';
+    icon: 'book';
   };
   attributes: {};
 }
@@ -120,7 +120,7 @@ export interface WidgetsBusinessProblems extends Struct.ComponentSchema {
   collectionName: 'components_widgets_business_problems';
   info: {
     displayName: 'BusinessProblems';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -129,6 +129,7 @@ export interface WidgetsCallToAction extends Struct.ComponentSchema {
   collectionName: 'components_widgets_call_to_actions';
   info: {
     displayName: 'CallToAction';
+    icon: 'alien';
   };
   attributes: {};
 }
@@ -156,6 +157,7 @@ export interface WidgetsCertifiedItCompany extends Struct.ComponentSchema {
   collectionName: 'components_widgets_certified_it_companies';
   info: {
     displayName: 'CertifiedITCompany';
+    icon: 'information';
   };
   attributes: {};
 }
@@ -164,7 +166,7 @@ export interface WidgetsConsent extends Struct.ComponentSchema {
   collectionName: 'components_widgets_consents';
   info: {
     displayName: 'Consent';
-    icon: 'alien';
+    icon: 'briefcase';
   };
   attributes: {};
 }
@@ -173,7 +175,7 @@ export interface WidgetsContact extends Struct.ComponentSchema {
   collectionName: 'components_widgets_contacts';
   info: {
     displayName: 'Contact';
-    icon: 'alien';
+    icon: 'phone';
   };
   attributes: {};
 }
@@ -191,7 +193,7 @@ export interface WidgetsHomeHero extends Struct.ComponentSchema {
   collectionName: 'components_widgets_home_heroes';
   info: {
     displayName: 'HomeHero';
-    icon: 'alien';
+    icon: 'house';
   };
   attributes: {};
 }
@@ -200,7 +202,7 @@ export interface WidgetsHowAreWeDifferent extends Struct.ComponentSchema {
   collectionName: 'components_widgets_how_are_we_differents';
   info: {
     displayName: 'HowAreWeDifferent';
-    icon: 'alien';
+    icon: 'information';
   };
   attributes: {};
 }
@@ -209,7 +211,7 @@ export interface WidgetsHowSystemLooks extends Struct.ComponentSchema {
   collectionName: 'components_widgets_how_system_looks';
   info: {
     displayName: 'HowSystemLooks';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -218,7 +220,7 @@ export interface WidgetsHowWeWork extends Struct.ComponentSchema {
   collectionName: 'components_widgets_how_we_works';
   info: {
     displayName: 'HowWeWork';
-    icon: 'alien';
+    icon: 'house';
   };
   attributes: {};
 }
@@ -227,7 +229,7 @@ export interface WidgetsIntegrationProcess extends Struct.ComponentSchema {
   collectionName: 'components_widgets_integration_processes';
   info: {
     displayName: 'IntegrationProcess';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -245,6 +247,7 @@ export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
   collectionName: 'components_widgets_meet_the_teams';
   info: {
     displayName: 'MeetTheTeam';
+    icon: 'information';
   };
   attributes: {};
 }
@@ -253,6 +256,7 @@ export interface WidgetsMoreServices extends Struct.ComponentSchema {
   collectionName: 'components_widgets_more_services';
   info: {
     displayName: 'MoreServices';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -261,6 +265,7 @@ export interface WidgetsOurApproach extends Struct.ComponentSchema {
   collectionName: 'components_widgets_our_approaches';
   info: {
     displayName: 'OurApproach';
+    icon: 'information';
   };
   attributes: {};
 }
@@ -285,7 +290,7 @@ export interface WidgetsPrivacy extends Struct.ComponentSchema {
   collectionName: 'components_widgets_privacies';
   info: {
     displayName: 'Privacy';
-    icon: 'alien';
+    icon: 'briefcase';
   };
   attributes: {};
 }
@@ -312,7 +317,7 @@ export interface WidgetsSectionHeroAiAgents extends Struct.ComponentSchema {
   collectionName: 'components_widgets_section_hero_ai_agents';
   info: {
     displayName: 'SectionHeroAIAgents';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -322,7 +327,7 @@ export interface WidgetsSectionHeroCrmAutomation
   collectionName: 'components_widgets_section_hero_crm_automations';
   info: {
     displayName: 'SectionHeroCRMAutomation';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -331,7 +336,7 @@ export interface WidgetsSectionHeroCustomErp extends Struct.ComponentSchema {
   collectionName: 'components_widgets_section_hero_custom_erps';
   info: {
     displayName: 'SectionHeroCustomERP';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -340,7 +345,7 @@ export interface WidgetsSectionHeroWebPlatforms extends Struct.ComponentSchema {
   collectionName: 'components_widgets_section_hero_web_platforms';
   info: {
     displayName: 'SectionHeroWebPlatforms';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -350,7 +355,7 @@ export interface WidgetsServiceHeroMessengerApps
   collectionName: 'components_widgets_service_hero_messenger_apps';
   info: {
     displayName: 'ServiceHeroMessengerApps';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -359,7 +364,7 @@ export interface WidgetsServiceHeroMobileApps extends Struct.ComponentSchema {
   collectionName: 'components_widgets_service_hero_mobile_apps';
   info: {
     displayName: 'ServiceHeroMobileApps';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -368,7 +373,7 @@ export interface WidgetsServiceProducts extends Struct.ComponentSchema {
   collectionName: 'components_widgets_service_products';
   info: {
     displayName: 'ServiceProducts';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -377,7 +382,7 @@ export interface WidgetsServiceTestimonials extends Struct.ComponentSchema {
   collectionName: 'components_widgets_service_testimonials';
   info: {
     displayName: 'ServiceTestimonials';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -386,7 +391,7 @@ export interface WidgetsServices extends Struct.ComponentSchema {
   collectionName: 'components_widgets_services';
   info: {
     displayName: 'Services';
-    icon: 'alien';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -395,6 +400,7 @@ export interface WidgetsServicesDirectory extends Struct.ComponentSchema {
   collectionName: 'components_widgets_services_directories';
   info: {
     displayName: 'ServicesDirectory';
+    icon: 'rocket';
   };
   attributes: {};
 }
@@ -412,7 +418,7 @@ export interface WidgetsTerms extends Struct.ComponentSchema {
   collectionName: 'components_widgets_terms';
   info: {
     displayName: 'Terms';
-    icon: 'alien';
+    icon: 'briefcase';
   };
   attributes: {};
 }
@@ -430,6 +436,7 @@ export interface WidgetsWhoWeAre extends Struct.ComponentSchema {
   collectionName: 'components_widgets_who_we_ares';
   info: {
     displayName: 'WhoWeAre';
+    icon: 'information';
   };
   attributes: {};
 }
@@ -438,6 +445,7 @@ export interface WidgetsWhyWorkWithUs extends Struct.ComponentSchema {
   collectionName: 'components_widgets_why_work_withuses';
   info: {
     displayName: 'WhyWorkWithUs';
+    icon: 'alien';
   };
   attributes: {};
 }

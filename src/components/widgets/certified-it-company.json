@@ -1,7 +1,8 @@
 {
   "collectionName": "components_widgets_certified_it_companies",
   "info": {
-    "displayName": "CertifiedITCompany"
+    "displayName": "CertifiedITCompany",
+    "icon": "information"
   },
   "options": {},
   "attributes": {},
