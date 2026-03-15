@@ -70,8 +70,6 @@
         "widgets.consent",
         "widgets.business-problems",
         "widgets.blog-posts",
-        "widgets.blog-hero",
-        "widgets.blog-articles-directory",
         "widgets.blog-article"
       ]
     }

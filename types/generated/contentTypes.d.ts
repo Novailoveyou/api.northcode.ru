@@ -629,8 +629,6 @@ export interface ApiBlogArticleBlogArticle extends Struct.CollectionTypeSchema {
         'widgets.certified-it-company',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -689,9 +687,7 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<
       [
-        'widgets.blog-hero',
         'widgets.blog-posts',
-        'widgets.blog-articles-directory',
         'widgets.lead-form-section',
         'widgets.call-to-action-testimonials',
         'widgets.call-to-action-question',
@@ -844,8 +840,6 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
         'widgets.certified-it-company',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &
@@ -982,8 +976,6 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'widgets.consent',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &
@@ -1108,8 +1100,6 @@ export interface ApiLegalConsentLegalConsent extends Struct.SingleTypeSchema {
         'widgets.call-to-action-question',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &
@@ -1194,8 +1184,6 @@ export interface ApiLegalPrivacyLegalPrivacy extends Struct.SingleTypeSchema {
         'widgets.call-to-action-question',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &
@@ -1280,8 +1268,6 @@ export interface ApiLegalTermLegalTerm extends Struct.SingleTypeSchema {
         'widgets.call-to-action-question',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &
@@ -1406,8 +1392,6 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
         'widgets.certified-it-company',
         'widgets.business-problems',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &
@@ -1493,8 +1477,6 @@ export interface ApiSingleServiceSingleService
         'widgets.consent',
         'widgets.certified-it-company',
         'widgets.blog-posts',
-        'widgets.blog-hero',
-        'widgets.blog-articles-directory',
         'widgets.blog-article',
       ]
     > &

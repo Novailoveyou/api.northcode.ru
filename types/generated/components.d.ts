@@ -89,24 +89,6 @@ export interface WidgetsBlogArticle extends Struct.ComponentSchema {
   attributes: {};
 }
 
-export interface WidgetsBlogArticlesDirectory extends Struct.ComponentSchema {
-  collectionName: 'components_widgets_blog_articles_directories';
-  info: {
-    displayName: 'BlogArticlesDirectory';
-    icon: 'book';
-  };
-  attributes: {};
-}
-
-export interface WidgetsBlogHero extends Struct.ComponentSchema {
-  collectionName: 'components_widgets_blog_heroes';
-  info: {
-    displayName: 'BlogHero';
-    icon: 'book';
-  };
-  attributes: {};
-}
-
 export interface WidgetsBlogPosts extends Struct.ComponentSchema {
   collectionName: 'components_widgets_blog_posts';
   info: {
@@ -461,8 +443,6 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'widgets.blog-article': WidgetsBlogArticle;
-      'widgets.blog-articles-directory': WidgetsBlogArticlesDirectory;
-      'widgets.blog-hero': WidgetsBlogHero;
       'widgets.blog-posts': WidgetsBlogPosts;
       'widgets.business-problems': WidgetsBusinessProblems;
       'widgets.call-to-action': WidgetsCallToAction;

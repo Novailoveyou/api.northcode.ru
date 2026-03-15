@@ -90,9 +90,7 @@
         "widgets.consent",
         "widgets.certified-it-company",
         "widgets.business-problems",
-        "widgets.blog-posts",
-        "widgets.blog-hero",
-        "widgets.blog-articles-directory"
+        "widgets.blog-posts"
       ]
     }
   }
