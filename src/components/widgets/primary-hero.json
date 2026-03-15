@@ -15,6 +15,32 @@
       "type": "text",
       "default": "Создаём ERP, CRM, AI-агентов и Telegram Mini Apps. Без шаблонов — только под ваши процессы. С гарантией результата и прозрачностью на каждом этапе",
       "required": true
+    },
+    "size": {
+      "type": "enumeration",
+      "required": true,
+      "default": "default",
+      "enum": [
+        "default",
+        "long"
+      ]
+    },
+    "badgeTexts": {
+      "type": "component",
+      "component": "shared.text",
+      "repeatable": true
+    },
+    "ctaButtons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true,
+      "required": true
+    },
+    "microDetails": {
+      "type": "component",
+      "component": "shared.text",
+      "repeatable": true,
+      "required": false
     }
   },
   "config": {}

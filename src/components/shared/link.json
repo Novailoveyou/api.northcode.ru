@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "link",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "default": "/lead",
+      "required": true
+    },
+    "primary": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "config": {}
+}

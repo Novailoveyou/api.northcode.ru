@@ -18,6 +18,23 @@ export interface FeaturesQuiz extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'link';
+    icon: 'alien';
+  };
+  attributes: {
+    href: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/lead'>;
+    primary: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -26,7 +43,8 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     alt: Schema.Attribute.String & Schema.Attribute.Required;
-    file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    file: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
     height: Schema.Attribute.Integer & Schema.Attribute.Required;
     width: Schema.Attribute.Integer & Schema.Attribute.Required;
   };
@@ -143,6 +161,17 @@ export interface SharedSeo extends Struct.ComponentSchema {
       Schema.Attribute.DefaultTo<'origin-when-cross-origin'>;
     robots: Schema.Attribute.Component<'shared.robots', false> &
       Schema.Attribute.Required;
+  };
+}
+
+export interface SharedText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_texts';
+  info: {
+    displayName: 'text';
+    icon: 'alien';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -325,9 +354,16 @@ export interface WidgetsPrimaryHero extends Struct.ComponentSchema {
     icon: 'alien';
   };
   attributes: {
+    badgeTexts: Schema.Attribute.Component<'shared.text', true>;
+    ctaButtons: Schema.Attribute.Component<'shared.link', true> &
+      Schema.Attribute.Required;
     description: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u0421\u043E\u0437\u0434\u0430\u0451\u043C ERP, CRM, AI-\u0430\u0433\u0435\u043D\u0442\u043E\u0432 \u0438 Telegram Mini Apps. \u0411\u0435\u0437 \u0448\u0430\u0431\u043B\u043E\u043D\u043E\u0432 \u2014 \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0434 \u0432\u0430\u0448\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B. \u0421 \u0433\u0430\u0440\u0430\u043D\u0442\u0438\u0435\u0439 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430 \u0438 \u043F\u0440\u043E\u0437\u0440\u0430\u0447\u043D\u043E\u0441\u0442\u044C\u044E \u043D\u0430 \u043A\u0430\u0436\u0434\u043E\u043C \u044D\u0442\u0430\u043F\u0435'>;
+    microDetails: Schema.Attribute.Component<'shared.text', true>;
+    size: Schema.Attribute.Enumeration<['default', 'long']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'default'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0440\u0435\u0448\u0430\u0435\u0442 \u0437\u0430\u0434\u0430\u0447\u0438 \u0431\u0438\u0437\u043D\u0435\u0441\u0430'>;
@@ -494,9 +530,11 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'features.lead-form': FeaturesLeadForm;
       'features.quiz': FeaturesQuiz;
+      'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.robots': SharedRobots;
       'shared.seo': SharedSeo;
+      'shared.text': SharedText;
       'widgets.blog-article': WidgetsBlogArticle;
       'widgets.blog-posts': WidgetsBlogPosts;
       'widgets.business-problems': WidgetsBusinessProblems;

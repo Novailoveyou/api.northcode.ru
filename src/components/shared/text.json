@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_texts",
+  "info": {
+    "displayName": "text",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
