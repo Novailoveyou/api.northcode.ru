@@ -5,6 +5,17 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Разработка, которая решает задачи бизнеса",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Создаём ERP, CRM, AI-агентов и Telegram Mini Apps. Без шаблонов — только под ваши процессы. С гарантией результата и прозрачностью на каждом этапе",
+      "required": true
+    }
+  },
   "config": {}
 }
