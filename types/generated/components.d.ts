@@ -25,31 +25,51 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {
+    alt: Schema.Attribute.String & Schema.Attribute.Required;
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    height: Schema.Attribute.Integer & Schema.Attribute.Required;
+    width: Schema.Attribute.Integer & Schema.Attribute.Required;
   };
 }
 
-export interface SharedQuote extends Struct.ComponentSchema {
-  collectionName: 'components_shared_quotes';
+export interface SharedRobots extends Struct.ComponentSchema {
+  collectionName: 'components_shared_robots';
   info: {
-    displayName: 'Quote';
-    icon: 'indent';
+    displayName: 'robots';
   };
   attributes: {
-    body: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface SharedRichText extends Struct.ComponentSchema {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    description: '';
-    displayName: 'Rich text';
-    icon: 'align-justify';
-  };
-  attributes: {
-    body: Schema.Attribute.RichText;
+    follow: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    index: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    indexifembedded: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    maxImagePreview: Schema.Attribute.Enumeration<
+      ['large', 'none', 'standard']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'large'>;
+    noarchive: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    nocache: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    noimageindex: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    nositelinkssearchbox: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    nosnippet: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    notranslate: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -62,21 +82,67 @@ export interface SharedSeo extends Struct.ComponentSchema {
     name: 'Seo';
   };
   attributes: {
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
-    shareImage: Schema.Attribute.Media<'images'>;
-  };
-}
-
-export interface SharedSlider extends Struct.ComponentSchema {
-  collectionName: 'components_shared_sliders';
-  info: {
-    description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
-  };
-  attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    appleIcon: Schema.Attribute.Component<'shared.media', false> &
+      Schema.Attribute.Required;
+    applicationName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'northcode.ru'>;
+    archives: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/archives'>;
+    assets: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/assets'>;
+    bookmarks: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/bookmarks'>;
+    category: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u0441\u0438\u0441\u0442\u0435\u043C'>;
+    classification: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0412\u0435\u0431-\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0438 IT-\u0443\u0441\u043B\u0443\u0433\u0438'>;
+    creator: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u0440\u043B\u043E\u0432 \u0418\u043B\u044C\u044F \u0410\u043B\u0435\u043A\u0441\u0435\u0435\u0432\u0438\u0447 (novailoveyou)'>;
+    generator: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Next.js'>;
+    icon: Schema.Attribute.Component<'shared.media', false> &
+      Schema.Attribute.Required;
+    manifest: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/manifest.webmanifest'>;
+    metaAuthor: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u0440\u043B\u043E\u0432 \u0418\u043B\u044C\u044F \u0410\u043B\u0435\u043A\u0441\u0435\u0435\u0432\u0438\u0447 (novailoveyou)'>;
+    metadataBase: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/'>;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0430\u0437\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u0435\u043C ERP, CRM, \u043A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0440\u0442\u0430\u043B\u044B \u0438 Telegram Mini Apps \u043F\u043E\u0434 \u043A\u043B\u044E\u0447. \u0418\u043D\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044F \u0441 1\u0421, \u043F\u0440\u043E\u0437\u0440\u0430\u0447\u043D\u0430\u044F \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430, \u0442\u0435\u0445\u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0430 24/7. \u0410\u043A\u043A\u0440\u0435\u0434\u0438\u0442\u0430\u0446\u0438\u044F \u041C\u0438\u043D\u0446\u0438\u0444\u0440\u044B \u0420\u0424. \u041F\u0435\u0440\u0432\u044B\u0435 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B \u2014 \u0447\u0435\u0440\u0435\u0437 2 \u043D\u0435\u0434\u0435\u043B\u0438.'>;
+    metaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'NorthCode \u2014 \u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0432\u0435\u0431-\u0441\u0438\u0441\u0442\u0435\u043C, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u043A\u0443\u043F\u0430\u044E\u0442\u0441\u044F'>;
+    publisher: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Vercel'>;
+    referrer: Schema.Attribute.Enumeration<
+      [
+        'no-referrer',
+        'no-referrer-when-downgrade',
+        'origin',
+        'origin-when-cross-origin',
+        'same-origin',
+        'strict-origin',
+        'strict-origin-when-cross-origin',
+      ]
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'origin-when-cross-origin'>;
+    robots: Schema.Attribute.Component<'shared.robots', false> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -429,10 +495,8 @@ declare module '@strapi/strapi' {
       'features.lead-form': FeaturesLeadForm;
       'features.quiz': FeaturesQuiz;
       'shared.media': SharedMedia;
-      'shared.quote': SharedQuote;
-      'shared.rich-text': SharedRichText;
+      'shared.robots': SharedRobots;
       'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
       'widgets.blog-article': WidgetsBlogArticle;
       'widgets.blog-posts': WidgetsBlogPosts;
       'widgets.business-problems': WidgetsBusinessProblems;

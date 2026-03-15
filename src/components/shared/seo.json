@@ -10,17 +10,105 @@
   "attributes": {
     "metaTitle": {
       "type": "string",
+      "default": "NorthCode — Разработка веб-систем, которые окупаются",
       "required": true
     },
     "metaDescription": {
       "type": "text",
+      "default": "Разрабатываем ERP, CRM, корпоративные порталы и Telegram Mini Apps под ключ. Интеграция с 1С, прозрачная разработка, техподдержка 24/7. Аккредитация Минцифры РФ. Первые результаты — через 2 недели.",
       "required": true
     },
-    "shareImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images"]
+    "metaAuthor": {
+      "type": "string",
+      "default": "Орлов Илья Алексеевич (novailoveyou)",
+      "required": true
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false,
+      "required": true
+    },
+    "appleIcon": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false,
+      "required": true
+    },
+    "robots": {
+      "type": "component",
+      "component": "shared.robots",
+      "repeatable": false,
+      "required": true
+    },
+    "archives": {
+      "type": "string",
+      "default": "/archives",
+      "required": true
+    },
+    "assets": {
+      "type": "string",
+      "default": "/assets",
+      "required": true
+    },
+    "bookmarks": {
+      "type": "string",
+      "default": "/bookmarks",
+      "required": true
+    },
+    "applicationName": {
+      "type": "string",
+      "default": "northcode.ru",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "default": "Разработка веб-систем",
+      "required": true
+    },
+    "classification": {
+      "type": "string",
+      "default": "Веб-разработка и IT-услуги",
+      "required": true
+    },
+    "creator": {
+      "type": "string",
+      "default": "Орлов Илья Алексеевич (novailoveyou)",
+      "required": true
+    },
+    "generator": {
+      "type": "string",
+      "default": "Next.js",
+      "required": true
+    },
+    "manifest": {
+      "type": "string",
+      "default": "/manifest.webmanifest",
+      "required": true
+    },
+    "metadataBase": {
+      "type": "string",
+      "default": "/",
+      "required": true
+    },
+    "publisher": {
+      "type": "string",
+      "default": "Vercel",
+      "required": true
+    },
+    "referrer": {
+      "type": "enumeration",
+      "required": true,
+      "default": "origin-when-cross-origin",
+      "enum": [
+        "no-referrer",
+        "no-referrer-when-downgrade",
+        "origin",
+        "origin-when-cross-origin",
+        "same-origin",
+        "strict-origin",
+        "strict-origin-when-cross-origin"
+      ]
     }
   }
 }

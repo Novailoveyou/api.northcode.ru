@@ -1,0 +1,65 @@
+{
+  "collectionName": "components_shared_robots",
+  "info": {
+    "displayName": "robots"
+  },
+  "options": {},
+  "attributes": {
+    "follow": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "index": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "maxImagePreview": {
+      "type": "enumeration",
+      "required": true,
+      "default": "large",
+      "enum": [
+        "large",
+        "none",
+        "standard"
+      ]
+    },
+    "noarchive": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "nocache": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "indexifembedded": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "noimageindex": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "nositelinkssearchbox": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "nosnippet": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "notranslate": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "config": {}
+}
