@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "legal_terms",
+  "info": {
+    "singularName": "legal-term",
+    "pluralName": "legal-terms",
+    "displayName": "LegalTerm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "widgets.terms"
+      ]
+    }
+  }
+}

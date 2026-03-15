@@ -1,0 +1,47 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "widgets.services-directory",
+        "widgets.services",
+        "widgets.more-services",
+        "widgets.call-to-action",
+        "widgets.call-to-action-testimonials",
+        "widgets.call-to-action-question",
+        "widgets.lead-form-section",
+        "widgets.primary-hero"
+      ]
+    }
+  }
+}

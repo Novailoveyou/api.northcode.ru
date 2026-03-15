@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "single_services",
+  "info": {
+    "singularName": "single-service",
+    "pluralName": "single-services",
+    "displayName": "SingleService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title",
+      "required": true
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "widgets.service-hero-mobile-apps",
+        "widgets.service-hero-messenger-apps",
+        "widgets.section-hero-web-platforms",
+        "widgets.section-hero-custom-erp",
+        "widgets.section-hero-crm-automation",
+        "widgets.section-hero-ai-agents",
+        "widgets.service-testimonials",
+        "widgets.service-products",
+        "widgets.business-problems",
+        "widgets.how-system-looks",
+        "widgets.call-to-action-question",
+        "widgets.call-to-action-testimonials",
+        "widgets.call-to-action",
+        "widgets.lead-form-section",
+        "widgets.integration-process",
+        "widgets.trusted-by",
+        "widgets.reviews",
+        "widgets.fa-q"
+      ]
+    }
+  }
+}
