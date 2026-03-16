@@ -5,6 +5,62 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Расскажите о своём проекте",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Оставьте заявку — свяжемся в течение 15-и минут. Обсудим вашу задачу, предложим решение и рассчитаем сроки. Первая консультация бесплатно",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": true,
+      "required": false
+    },
+    "contacts": {
+      "type": "component",
+      "component": "shared.testimonial-with-media",
+      "repeatable": true
+    },
+    "nameInput": {
+      "type": "component",
+      "component": "shared.input",
+      "repeatable": false,
+      "required": false
+    },
+    "budgetInput": {
+      "type": "component",
+      "component": "shared.input",
+      "repeatable": false,
+      "required": false
+    },
+    "phoneNumberInput": {
+      "type": "component",
+      "component": "shared.input",
+      "repeatable": false,
+      "required": true
+    },
+    "emailInput": {
+      "type": "component",
+      "component": "shared.input",
+      "repeatable": false,
+      "required": false
+    },
+    "descriptionInput": {
+      "type": "component",
+      "component": "shared.input",
+      "repeatable": false
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

@@ -379,7 +379,12 @@ export interface WidgetsFaQ extends Struct.ComponentSchema {
     displayName: 'FaQ';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    questions: Schema.Attribute.Relation<'oneToMany', 'api::question.question'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u0442\u0432\u0435\u0442\u044B \u043D\u0430 \u0447\u0430\u0441\u0442\u044B\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B'>;
+  };
 }
 
 export interface WidgetsHomeHero extends Struct.ComponentSchema {
@@ -467,7 +472,23 @@ export interface WidgetsLeadFormSection extends Struct.ComponentSchema {
     displayName: 'LeadFormSection';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    budgetInput: Schema.Attribute.Component<'shared.input', false>;
+    button: Schema.Attribute.Component<'shared.button', false>;
+    contacts: Schema.Attribute.Component<'shared.testimonial-with-media', true>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0437\u0430\u044F\u0432\u043A\u0443 \u2014 \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 15-\u0438 \u043C\u0438\u043D\u0443\u0442. \u041E\u0431\u0441\u0443\u0434\u0438\u043C \u0432\u0430\u0448\u0443 \u0437\u0430\u0434\u0430\u0447\u0443, \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0438\u043C \u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u0438 \u0440\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0435\u043C \u0441\u0440\u043E\u043A\u0438. \u041F\u0435\u0440\u0432\u0430\u044F \u043A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0438\u044F \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E'>;
+    descriptionInput: Schema.Attribute.Component<'shared.input', false>;
+    emailInput: Schema.Attribute.Component<'shared.input', false>;
+    nameInput: Schema.Attribute.Component<'shared.input', false>;
+    phoneNumberInput: Schema.Attribute.Component<'shared.input', false> &
+      Schema.Attribute.Required;
+    testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0430\u0441\u0441\u043A\u0430\u0436\u0438\u0442\u0435 \u043E \u0441\u0432\u043E\u0451\u043C \u043F\u0440\u043E\u0435\u043A\u0442\u0435'>;
+  };
 }
 
 export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
