@@ -5,6 +5,28 @@
     "icon": "house"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "textAbove": {
+      "type": "string",
+      "default": "Российская IT компания",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Ваш IT-партнер от идеи до запуска.",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "ERP, Telegram Mini Apps, корпоративные порталы, CRM и автоматизация процессов",
+      "required": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false,
+      "required": true
+    }
+  },
   "config": {}
 }

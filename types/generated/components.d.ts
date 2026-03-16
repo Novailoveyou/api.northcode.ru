@@ -361,7 +361,19 @@ export interface WidgetsHomeHero extends Struct.ComponentSchema {
     displayName: 'HomeHero';
     icon: 'house';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.link', false> &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ERP, Telegram Mini Apps, \u043A\u043E\u0440\u043F\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u043E\u0440\u0442\u0430\u043B\u044B, CRM \u0438 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044F \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0432'>;
+    textAbove: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u043E\u0441\u0441\u0438\u0439\u0441\u043A\u0430\u044F IT \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0412\u0430\u0448 IT-\u043F\u0430\u0440\u0442\u043D\u0435\u0440 \u043E\u0442 \u0438\u0434\u0435\u0438 \u0434\u043E \u0437\u0430\u043F\u0443\u0441\u043A\u0430.'>;
+  };
 }
 
 export interface WidgetsHowAreWeDifferent extends Struct.ComponentSchema {
@@ -416,7 +428,10 @@ export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
     icon: 'information';
   };
   attributes: {
-    teamMembers: Schema.Attribute.Component<'shared.team-member', true>;
+    teamMembers: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u041D\u0430\u0448\u0430 \u043A\u043E\u043C\u0430\u043D\u0434\u0430'>;
@@ -494,7 +509,15 @@ export interface WidgetsProjects extends Struct.ComponentSchema {
     displayName: 'Projects';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0435\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0441 \u0438\u0437\u043C\u0435\u0440\u0438\u043C\u044B\u043C\u0438 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430\u043C\u0438. \u0421\u043C\u043E\u0442\u0440\u0438\u0442\u0435, \u043A\u0430\u043A \u0431\u0438\u0437\u043D\u0435\u0441 \u0440\u0435\u0448\u0430\u0435\u0442 \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u044B\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u0438 \u043F\u043E\u043B\u0443\u0447\u0430\u0435\u0442 ROI.'>;
+    projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041A\u0435\u0439\u0441\u044B'>;
+  };
 }
 
 export interface WidgetsReviews extends Struct.ComponentSchema {
@@ -614,8 +637,7 @@ export interface WidgetsTrustedBy extends Struct.ComponentSchema {
     icon: 'alien';
   };
   attributes: {
-    images: Schema.Attribute.Component<'shared.media', true> &
-      Schema.Attribute.Required;
+    clients: Schema.Attribute.Relation<'oneToMany', 'api::client.client'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u041D\u0430\u043C \u0434\u043E\u0432\u0435\u0440\u044F\u044E\u0442'>;

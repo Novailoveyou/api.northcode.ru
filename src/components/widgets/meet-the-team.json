@@ -12,9 +12,9 @@
       "required": true
     },
     "teamMembers": {
-      "type": "component",
-      "component": "shared.team-member",
-      "repeatable": true
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-member.team-member"
     }
   },
   "config": {}

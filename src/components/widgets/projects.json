@@ -5,6 +5,22 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Кейсы",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Реальные проекты с измеримыми результатами. Смотрите, как бизнес решает конкретные задачи и получает ROI.",
+      "required": true
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    }
+  },
   "config": {}
 }
