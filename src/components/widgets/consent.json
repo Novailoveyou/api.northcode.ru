@@ -5,6 +5,16 @@
     "icon": "briefcase"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Пользовательское Соглашение",
+      "required": true
+    },
+    "content": {
+      "type": "blocks",
+      "required": true
+    }
+  },
   "config": {}
 }

@@ -372,7 +372,12 @@ export interface WidgetsConsent extends Struct.ComponentSchema {
     displayName: 'Consent';
     icon: 'briefcase';
   };
-  attributes: {};
+  attributes: {
+    content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u043E\u0435 \u0421\u043E\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435'>;
+  };
 }
 
 export interface WidgetsContact extends Struct.ComponentSchema {
@@ -589,7 +594,12 @@ export interface WidgetsPrivacy extends Struct.ComponentSchema {
     displayName: 'Privacy';
     icon: 'briefcase';
   };
-  attributes: {};
+  attributes: {
+    content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0430 \u0432 \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u0438 \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0438 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445'>;
+  };
 }
 
 export interface WidgetsProjects extends Struct.ComponentSchema {
@@ -741,7 +751,12 @@ export interface WidgetsTerms extends Struct.ComponentSchema {
     displayName: 'Terms';
     icon: 'briefcase';
   };
-  attributes: {};
+  attributes: {
+    content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0414\u043E\u0433\u043E\u0432\u043E\u0440 \u043F\u0443\u0431\u043B\u0438\u0447\u043D\u043E\u0439 \u043E\u0444\u0435\u0440\u0442\u044B'>;
+  };
 }
 
 export interface WidgetsTrustedBy extends Struct.ComponentSchema {
