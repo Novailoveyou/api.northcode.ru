@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "question": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Какие сроки разработки проекта?",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Сроки разработки зависят от масштаба проекта. Лендинг или простой сайт занимает 2-4 недели, корпоративный портал — 1-3 месяца, а разработка CRM или ERP-системы может занять от 3 до 6 месяцев. Мы всегда согласуем сроки на этапе планирования и придерживаемся дедлайнов.",
+      "required": true
+    }
+  }
+}

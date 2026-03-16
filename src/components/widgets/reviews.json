@@ -5,6 +5,26 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "aboveTitle": {
+      "type": "string",
+      "default": "Отзывы клиентов",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "default": "Что говорят наши клиенты",
+      "required": true
+    },
+    "belowTitle": {
+      "type": "string",
+      "default": "Реальные отзывы о работе с нашей студией"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
+    }
+  },
   "config": {}
 }

@@ -5,6 +5,23 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Готовы обсудить ваш проект?",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Оставьте заявку, и мы свяжемся с вами в течение 15-и минут",
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true,
+      "required": true
+    }
+  },
   "config": {}
 }

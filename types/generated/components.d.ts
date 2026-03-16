@@ -320,7 +320,16 @@ export interface WidgetsCallToActionQuestion extends Struct.ComponentSchema {
     displayName: 'CallToActionQuestion';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    buttons: Schema.Attribute.Component<'shared.link', true> &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0437\u0430\u044F\u0432\u043A\u0443, \u0438 \u043C\u044B \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 15-\u0438 \u043C\u0438\u043D\u0443\u0442'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0413\u043E\u0442\u043E\u0432\u044B \u043E\u0431\u0441\u0443\u0434\u0438\u0442\u044C \u0432\u0430\u0448 \u043F\u0440\u043E\u0435\u043A\u0442?'>;
+  };
 }
 
 export interface WidgetsCallToActionTestimonials
@@ -566,7 +575,16 @@ export interface WidgetsReviews extends Struct.ComponentSchema {
     displayName: 'Reviews';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    aboveTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u041E\u0442\u0437\u044B\u0432\u044B \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432'>;
+    belowTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u0420\u0435\u0430\u043B\u044C\u043D\u044B\u0435 \u043E\u0442\u0437\u044B\u0432\u044B \u043E \u0440\u0430\u0431\u043E\u0442\u0435 \u0441 \u043D\u0430\u0448\u0435\u0439 \u0441\u0442\u0443\u0434\u0438\u0435\u0439'>;
+    reviews: Schema.Attribute.Relation<'oneToMany', 'api::review.review'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0427\u0442\u043E \u0433\u043E\u0432\u043E\u0440\u044F\u0442 \u043D\u0430\u0448\u0438 \u043A\u043B\u0438\u0435\u043D\u0442\u044B'>;
+  };
 }
 
 export interface WidgetsSectionHeroAiAgents extends Struct.ComponentSchema {
@@ -666,7 +684,15 @@ export interface WidgetsTechnologies extends Struct.ComponentSchema {
     displayName: 'Technologies';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    technologies: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::technology.technology'
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0422\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438'>;
+  };
 }
 
 export interface WidgetsTerms extends Struct.ComponentSchema {
