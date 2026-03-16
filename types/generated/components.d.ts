@@ -33,6 +33,32 @@ export interface SharedButton extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedHowSystemLooksItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_how_system_looks_items';
+  info: {
+    displayName: 'HowSystemLooksItem';
+    icon: 'alien';
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u043E\u0437\u0434\u0430\u0451\u043C \u043C\u0438\u043D\u0438\u043C\u0430\u043B\u044C\u043D\u043E \u0436\u0438\u0437\u043D\u0435\u0441\u043F\u043E\u0441\u043E\u0431\u043D\u044B\u0439 \u043F\u0440\u043E\u0434\u0443\u043A\u0442. \u0418\u043D\u0442\u0435\u0433\u0440\u0438\u0440\u0443\u0435\u043C \u0441 Telegram Bot API. \u0420\u0435\u0430\u043B\u0438\u0437\u0443\u0435\u043C \u043A\u043B\u044E\u0447\u0435\u0432\u043E\u0439 \u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0430\u043B'>;
+    icon: Schema.Attribute.Component<'shared.media', false>;
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0412 \u0440\u0430\u0431\u043E\u0442\u0435'>;
+    progressPercent: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<70>;
+    timeframe: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041D\u0435\u0434\u0435\u043B\u044F 4-5'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 MVP'>;
+  };
+}
+
 export interface SharedInput extends Struct.ComponentSchema {
   collectionName: 'components_shared_inputs';
   info: {
@@ -43,6 +69,26 @@ export interface SharedInput extends Struct.ComponentSchema {
     placeholder: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'@username \u0438\u043B\u0438 \u043D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430'>;
+  };
+}
+
+export interface SharedIntegrationProcessItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_integration_process_items';
+  info: {
+    displayName: 'IntegrationProcessItem';
+    icon: 'alien';
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0413\u043E\u0442\u043E\u0432\u0438\u043C \u043F\u0440\u043E\u0442\u043E\u0442\u0438\u043F \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0430 \u0438 \u0441\u0445\u0435\u043C\u0443 \u0441\u0438\u0441\u0442\u0435\u043C\u044B. \u0412\u044B \u0432\u0438\u0434\u0438\u0442\u0435 \u0438 \u0443\u0442\u0432\u0435\u0440\u0436\u0434\u0430\u0435\u0442\u0435 \u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u0434\u043E \u0442\u043E\u0433\u043E, \u043A\u0430\u043A \u043C\u044B \u043D\u0430\u043F\u0438\u0448\u0435\u043C \u043F\u0435\u0440\u0432\u0443\u044E \u0441\u0442\u0440\u043E\u043A\u0443 \u043A\u043E\u0434\u0430.'>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    step: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u043C, \u043A\u0430\u043A \u0431\u0443\u0434\u0435\u0442 \u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C'>;
   };
 }
 
@@ -263,7 +309,9 @@ export interface WidgetsBlogArticle extends Struct.ComponentSchema {
     displayName: 'BlogArticle';
     icon: 'book';
   };
-  attributes: {};
+  attributes: {
+    content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
 }
 
 export interface WidgetsBlogPosts extends Struct.ComponentSchema {
@@ -292,7 +340,18 @@ export interface WidgetsBusinessProblems extends Struct.ComponentSchema {
     displayName: 'BusinessProblems';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    graphValue: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<280>;
+    testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0430\u0441\u0448\u0438\u0440\u044F\u0435\u043C \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u0438 \u0432\u0430\u0448\u0435\u0433\u043E \u0431\u0438\u0437\u043D\u0435\u0441\u0430 \u0432\u043D\u0443\u0442\u0440\u0438 \u043C\u0435\u0441\u0441\u0435\u043D\u0434\u0436\u0435\u0440\u0430. \u041E\u043F\u043B\u0430\u0442\u044B, \u0437\u0430\u043A\u0430\u0437\u044B, \u0441\u0435\u0440\u0432\u0438\u0441\u044B \u2014 \u0432\u0441\u0451 \u0432 \u043E\u0434\u043D\u043E\u043C \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0438'>;
+    titleHighlight: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Telegram Mini Apps \u043F\u043E\u0434 \u043A\u043B\u044E\u0447'>;
+  };
 }
 
 export interface WidgetsCallToAction extends Struct.ComponentSchema {
@@ -352,7 +411,16 @@ export interface WidgetsCallToActionTestimonials
     displayName: 'CallToActionTestimonials';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.link', false>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u0432\u044F\u0436\u0438\u0442\u0435\u0441\u044C \u0441 \u043D\u0430\u043C\u0438 \u0434\u043B\u044F \u043E\u0431\u0441\u0443\u0436\u0434\u0435\u043D\u0438\u044F \u0432\u0430\u0448\u0435\u0439 \u0437\u0430\u0434\u0430\u0447\u0438. \u041C\u044B \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u0440\u0435\u0448\u0435\u043D\u0438\u0435, \u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u0432\u0430\u0448\u0435\u043C\u0443 \u0431\u0438\u0437\u043D\u0435\u0441\u0443 \u0440\u0430\u0441\u0442\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0442\u044C\u0441\u044F.'>;
+    testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0413\u043E\u0442\u043E\u0432\u044B \u043D\u0430\u0447\u0430\u0442\u044C \u0432\u0430\u0448 \u043F\u0440\u043E\u0435\u043A\u0442?'>;
+  };
 }
 
 export interface WidgetsCertifiedItCompany extends Struct.ComponentSchema {
@@ -460,7 +528,13 @@ export interface WidgetsHowSystemLooks extends Struct.ComponentSchema {
     displayName: 'HowSystemLooks';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    items: Schema.Attribute.Component<'shared.how-system-looks-item', false> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041A\u0430\u043A \u0432\u044B\u0433\u043B\u044F\u0434\u0438\u0442 \u0441\u0438\u0441\u0442\u0435\u043C\u0430'>;
+  };
 }
 
 export interface WidgetsHowWeWork extends Struct.ComponentSchema {
@@ -489,7 +563,12 @@ export interface WidgetsIntegrationProcess extends Struct.ComponentSchema {
     displayName: 'IntegrationProcess';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    items: Schema.Attribute.Component<'shared.integration-process-item', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u043E\u0446\u0435\u0441\u0441 \u0432\u043D\u0435\u0434\u0440\u0435\u043D\u0438\u044F'>;
+  };
 }
 
 export interface WidgetsLeadFormSection extends Struct.ComponentSchema {
@@ -622,7 +701,18 @@ export interface WidgetsSectionHeroAiAgents extends Struct.ComponentSchema {
     displayName: 'SectionHeroAIAgents';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    aboveTitleText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'AI-\u0430\u0433\u0435\u043D\u0442\u044B'>;
+    buttons: Schema.Attribute.Component<'shared.link', true>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0437\u0430\u044F\u0432\u043E\u043A, \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u043E\u0432, \u043A\u043E\u043C\u043C\u0443\u043D\u0438\u043A\u0430\u0446\u0438\u0439 \u0431\u0435\u0437 \u0443\u0447\u0430\u0441\u0442\u0438\u044F \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430'>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'AI-\u0430\u0433\u0435\u043D\u0442\u044B'>;
+  };
 }
 
 export interface WidgetsSectionHeroCrmAutomation
@@ -632,7 +722,16 @@ export interface WidgetsSectionHeroCrmAutomation
     displayName: 'SectionHeroCRMAutomation';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    buttons: Schema.Attribute.Component<'shared.link', true>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'CRM \u043F\u043E\u0434 \u0432\u0430\u0448\u0443 \u0432\u043E\u0440\u043E\u043D\u043A\u0443, \u0430 \u043D\u0435 \u043F\u043E\u0434 \u0448\u0430\u0431\u043B\u043E\u043D\u044B \u043A\u043E\u0440\u043E\u0431\u043E\u0447\u043D\u044B\u0445 \u0440\u0435\u0448\u0435\u043D\u0438\u0439. \u041A\u043E\u043D\u0442\u0440\u043E\u043B\u044C \u0441\u0434\u0435\u043B\u043E\u043A, \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044F \u0440\u0443\u0442\u0438\u043D\u044B, \u043E\u0442\u0447\u0451\u0442\u044B \u0434\u043B\u044F \u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u0430. \u041D\u0438 \u043E\u0434\u043D\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043D\u0435 \u043F\u043E\u0442\u0435\u0440\u044F\u0435\u0442\u0441\u044F.'>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'CRM + \u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044F \u043F\u0440\u043E\u0434\u0430\u0436'>;
+  };
 }
 
 export interface WidgetsSectionHeroCustomErp extends Struct.ComponentSchema {
@@ -641,7 +740,18 @@ export interface WidgetsSectionHeroCustomErp extends Struct.ComponentSchema {
     displayName: 'SectionHeroCustomERP';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    aboveTitleText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u0421\u0438\u0441\u0442\u0435\u043C\u0430 \u043E\u043A\u0443\u043F\u0430\u0435\u0442\u0441\u044F \u043E\u0442 3-\u0435\u0445 \u043C\u0435\u0441\u044F\u0446\u0435\u0432. \u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044C \u0441\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u044C'>;
+    buttons: Schema.Attribute.Component<'shared.link', true>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043F\u0440\u043E\u0434\u0430\u0436\u0430\u043C\u0438, \u0437\u0430\u043A\u0443\u043F\u043A\u0430\u043C\u0438, \u0441\u043A\u043B\u0430\u0434\u043E\u043C, \u0444\u0438\u043D\u0430\u043D\u0441\u0430\u043C\u0438 \u0438 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u043E\u043C \u0432 \u043E\u0434\u043D\u043E\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u0435. \u0417\u0430\u043C\u0435\u043D\u044F\u0435\u0442 Excel \u0438 \u0440\u0430\u0437\u0440\u043E\u0437\u043D\u0435\u043D\u043D\u044B\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044B. \u0420\u0430\u0441\u0442\u0451\u0442 \u0432\u043C\u0435\u0441\u0442\u0435 \u0441 \u0431\u0438\u0437\u043D\u0435\u0441\u043E\u043C. \u041F\u0440\u043E\u0437\u0440\u0430\u0447\u043D\u043E\u0441\u0442\u044C \u043E\u043F\u0435\u0440\u0430\u0446\u0438\u0439. \u041A\u043E\u043D\u0442\u0440\u043E\u043B\u044C \u043D\u0430 \u0432\u0441\u0435\u0445 \u0443\u0440\u043E\u0432\u043D\u044F\u0445'>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041A\u0430\u0441\u0442\u043E\u043C\u043D\u044B\u0435 ERP'>;
+  };
 }
 
 export interface WidgetsSectionHeroWebPlatforms extends Struct.ComponentSchema {
@@ -650,7 +760,16 @@ export interface WidgetsSectionHeroWebPlatforms extends Struct.ComponentSchema {
     displayName: 'SectionHeroWebPlatforms';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    buttons: Schema.Attribute.Component<'shared.link', true>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'B2B-\u0441\u0435\u0440\u0432\u0438\u0441\u044B, \u043C\u0430\u0440\u043A\u0435\u0442\u043F\u043B\u0435\u0439\u0441\u044B, \u043F\u043E\u0440\u0442\u0430\u043B\u044B \u0441 \u043B\u0438\u0447\u043D\u044B\u043C\u0438 \u043A\u0430\u0431\u0438\u043D\u0435\u0442\u0430\u043C\u0438 \u0438 \u0441\u043B\u043E\u0436\u043D\u043E\u0439 \u043B\u043E\u0433\u0438\u043A\u043E\u0439.\u041D\u0435 \u0432\u0438\u0437\u0438\u0442\u043A\u0438 \u2014 \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u0434\u043B\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0432 \u0438 \u0440\u0430\u0431\u043E\u0442\u044B \u0441 \u0434\u0430\u043D\u043D\u044B\u043C\u0438.\u0418\u043D\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044F \u0441 \u0443\u0447\u0451\u0442\u043D\u044B\u043C\u0438 \u0441\u0438\u0441\u0442\u0435\u043C\u0430\u043C\u0438, API, \u0440\u043E\u043B\u0438 \u0438 \u043F\u0440\u0430\u0432\u0430 \u0434\u043E\u0441\u0442\u0443\u043F\u0430.'>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u0430\u0439\u0442\u044B \u0438 \u0412\u0435\u0431-\u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u044B'>;
+  };
 }
 
 export interface WidgetsServiceHeroMessengerApps
@@ -660,7 +779,16 @@ export interface WidgetsServiceHeroMessengerApps
     displayName: 'ServiceHeroMessengerApps';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    buttons: Schema.Attribute.Component<'shared.link', true> &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Mini Apps \u0434\u043B\u044F Telegram, VK, \u041C\u0422\u0421 \u041C\u0430\u0440\u0443\u0441\u044F \u0431\u0435\u0437 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438. \u0414\u043E\u0441\u0442\u0443\u043F \u0432 \u043E\u0434\u0438\u043D \u043A\u043B\u0438\u043A.\u041A\u0430\u0442\u0430\u043B\u043E\u0433\u0438, \u0437\u0430\u043A\u0430\u0437\u044B, \u043B\u0438\u0447\u043D\u044B\u0435 \u043A\u0430\u0431\u0438\u043D\u0435\u0442\u044B, \u0443\u0432\u0435\u0434\u043E\u043C\u043B\u0435\u043D\u0438\u044F \u2014 \u043A\u0430\u043A \u043D\u0430\u0442\u0438\u0432\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435.\u0412\u0430\u0448\u0438 \u043A\u043B\u0438\u0435\u043D\u0442\u044B \u0443\u0436\u0435 \u0432 \u043C\u0435\u0441\u0441\u0435\u043D\u0434\u0436\u0435\u0440\u0430\u0445. \u0411\u0443\u0434\u044C\u0442\u0435 \u0442\u0430\u043C, \u0433\u0434\u0435 \u043E\u043D\u0438'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0432 \u043C\u0435\u0441\u0441\u0435\u043D\u0434\u0436\u0435\u0440\u0430\u0445'>;
+  };
 }
 
 export interface WidgetsServiceHeroMobileApps extends Struct.ComponentSchema {
@@ -669,7 +797,15 @@ export interface WidgetsServiceHeroMobileApps extends Struct.ComponentSchema {
     displayName: 'ServiceHeroMobileApps';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    buttons: Schema.Attribute.Component<'shared.link', true>;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041D\u0430\u0442\u0438\u0432\u043D\u044B\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0434\u043B\u044F iOS \u0438 Android \u0441 \u0432\u044B\u0441\u043E\u043A\u043E\u0439 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C\u044E.\u0420\u0430\u0431\u043E\u0442\u0430 \u043E\u0444\u043B\u0430\u0439\u043D, push-\u0443\u0432\u0435\u0434\u043E\u043C\u043B\u0435\u043D\u0438\u044F, \u0438\u043D\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044F \u0441 \u043A\u0430\u043C\u0435\u0440\u043E\u0439 \u0438 GPS.\u041E\u0434\u043D\u0430 \u043A\u043E\u0434\u043E\u0432\u0430\u044F \u0431\u0430\u0437\u0430 \u2014 \u0434\u0432\u0430 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0439'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F'>;
+  };
 }
 
 export interface WidgetsServiceProducts extends Struct.ComponentSchema {
@@ -678,7 +814,18 @@ export interface WidgetsServiceProducts extends Struct.ComponentSchema {
     displayName: 'ServiceProducts';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u0438\u0441\u0442\u0435\u043C\u044B, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u043A\u0443\u043F\u0438\u043B\u0438\u0441\u044C \u0432 \u043F\u0435\u0440\u0432\u044B\u0435 \u043C\u0435\u0441\u044F\u0446\u044B \u0440\u0430\u0431\u043E\u0442\u044B. \u041E\u0442 \u0441\u043A\u043B\u0430\u0434\u0441\u043A\u043E\u0433\u043E \u0443\u0447\u0451\u0442\u0430 \u0434\u043E AI-\u043F\u043E\u0434\u0434\u0435\u0440\u0436\u043A\u0438 \u2014 \u043A\u0430\u0436\u0434\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 \u0440\u0435\u0448\u0430\u0435\u0442 \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u0443\u044E \u0437\u0430\u0434\u0430\u0447\u0443 \u0431\u0438\u0437\u043D\u0435\u0441\u0430.'>;
+    services: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::single-service.single-service'
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041A\u0435\u0439\u0441\u044B'>;
+  };
 }
 
 export interface WidgetsServiceTestimonials extends Struct.ComponentSchema {
@@ -687,7 +834,12 @@ export interface WidgetsServiceTestimonials extends Struct.ComponentSchema {
     displayName: 'ServiceTestimonials';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    testimonials: Schema.Attribute.Component<
+      'shared.testimonial-with-media',
+      true
+    >;
+  };
 }
 
 export interface WidgetsServices extends Struct.ComponentSchema {
@@ -789,7 +941,9 @@ declare module '@strapi/strapi' {
       'features.lead-form': FeaturesLeadForm;
       'features.quiz': FeaturesQuiz;
       'shared.button': SharedButton;
+      'shared.how-system-looks-item': SharedHowSystemLooksItem;
       'shared.input': SharedInput;
+      'shared.integration-process-item': SharedIntegrationProcessItem;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.robots': SharedRobots;

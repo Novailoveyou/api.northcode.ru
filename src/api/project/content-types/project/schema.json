@@ -56,6 +56,17 @@
       "component": "shared.link",
       "repeatable": false,
       "required": true
+    },
+    "images": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.media",
+      "repeatable": true,
+      "required": true
     }
   }
 }

@@ -5,6 +5,27 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "titleHighlight": {
+      "type": "string",
+      "default": "Telegram Mini Apps под ключ",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Расширяем возможности вашего бизнеса внутри мессенджера. Оплаты, заказы, сервисы — всё в одном приложении",
+      "required": true
+    },
+    "graphValue": {
+      "type": "integer",
+      "required": true,
+      "default": 280
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

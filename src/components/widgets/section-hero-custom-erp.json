@@ -5,6 +5,31 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Кастомные ERP",
+      "required": true
+    },
+    "aboveTitleText": {
+      "type": "string",
+      "default": "Система окупается от 3-ех месяцев. Рассчитать стоимость"
+    },
+    "description": {
+      "type": "text",
+      "default": "Управление продажами, закупками, складом, финансами и производством в одной системе. Заменяет Excel и разрозненные сервисы. Растёт вместе с бизнесом. Прозрачность операций. Контроль на всех уровнях",
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_integration_process_items",
+  "info": {
+    "displayName": "IntegrationProcessItem",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Показываем, как будет работать",
+      "required": true
+    },
+    "step": {
+      "type": "string",
+      "default": "Проектирование",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Готовим прототип интерфейса и схему системы. Вы видите и утверждаете решение до того, как мы напишем первую строку кода.",
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

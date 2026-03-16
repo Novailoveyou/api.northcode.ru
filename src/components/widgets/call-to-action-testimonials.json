@@ -5,6 +5,27 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Готовы начать ваш проект?",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Свяжитесь с нами для обсуждения вашей задачи. Мы разработаем решение, которое поможет вашему бизнесу расти и развиваться.",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

@@ -5,6 +5,32 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "AI-агенты",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Обработка заявок, документов, коммуникаций без участия человека",
+      "required": true
+    },
+    "aboveTitleText": {
+      "type": "string",
+      "default": "AI-агенты",
+      "required": false
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

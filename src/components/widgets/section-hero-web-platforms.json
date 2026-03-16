@@ -5,6 +5,27 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Сайты и Веб-платформы",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "B2B-сервисы, маркетплейсы, порталы с личными кабинетами и сложной логикой.Не визитки — решения для автоматизации процессов и работы с данными.Интеграция с учётными системами, API, роли и права доступа.",
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  },
   "config": {}
 }

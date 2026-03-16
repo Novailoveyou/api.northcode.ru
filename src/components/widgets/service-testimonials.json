@@ -5,6 +5,12 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial-with-media",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

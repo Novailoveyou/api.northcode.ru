@@ -5,6 +5,22 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Мобильные приложения",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Нативные приложения для iOS и Android с высокой производительностью.Работа офлайн, push-уведомления, интеграция с камерой и GPS.Одна кодовая база — два магазина приложений",
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

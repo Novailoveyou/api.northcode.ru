@@ -5,6 +5,23 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Приложения в мессенджерах",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Mini Apps для Telegram, VK, МТС Маруся без установки. Доступ в один клик.Каталоги, заказы, личные кабинеты, уведомления — как нативное приложение.Ваши клиенты уже в мессенджерах. Будьте там, где они",
+      "required": true
+    },
+    "buttons": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true,
+      "required": true
+    }
+  },
   "config": {}
 }

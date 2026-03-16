@@ -5,6 +5,22 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Кейсы",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Системы, которые окупились в первые месяцы работы. От складского учёта до AI-поддержки — каждый проект решает конкретную задачу бизнеса.",
+      "required": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::single-service.single-service"
+    }
+  },
   "config": {}
 }

@@ -35,6 +35,52 @@
       "targetField": "title",
       "required": true
     },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Выбираем между монолитом, микросервисами и серверлесом для ERP-системы. Плюсы и минусы каждого подхода на примере реальных кейсов",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog-article-category.blog-article-category",
+      "inversedBy": "blogArticles"
+    },
+    "readTimeMin": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "default": 8
+    },
+    "views": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false,
+      "default": 0
+    },
+    "rating": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "default": 5
+    },
     "seo": {
       "type": "component",
       "pluginOptions": {
@@ -44,6 +90,26 @@
       },
       "component": "shared.seo",
       "repeatable": false
+    },
+    "image": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.media",
+      "repeatable": false,
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     },
     "sections": {
       "type": "dynamiczone",

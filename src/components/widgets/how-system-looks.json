@@ -5,6 +5,18 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Как выглядит система",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.how-system-looks-item",
+      "repeatable": false,
+      "required": true
+    }
+  },
   "config": {}
 }

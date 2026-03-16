@@ -5,6 +5,11 @@
     "icon": "book"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "content": {
+      "type": "blocks",
+      "required": true
+    }
+  },
   "config": {}
 }

@@ -5,6 +5,17 @@
     "icon": "rocket"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Процесс внедрения",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.integration-process-item",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

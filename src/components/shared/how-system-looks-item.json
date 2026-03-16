@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_how_system_looks_items",
+  "info": {
+    "displayName": "HowSystemLooksItem",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "В работе",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Разработка MVP",
+      "required": true
+    },
+    "timeframe": {
+      "type": "string",
+      "default": "Неделя 4-5",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Создаём минимально жизнеспособный продукт. Интегрируем с Telegram Bot API. Реализуем ключевой функционал",
+      "required": true
+    },
+    "progressPercent": {
+      "type": "integer",
+      "required": true,
+      "default": 70
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}
