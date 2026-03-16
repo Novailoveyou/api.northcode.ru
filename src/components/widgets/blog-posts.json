@@ -5,6 +5,22 @@
     "icon": "book"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Экспертиза и опыт",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Делимся знаниями из реальных проектов: технологии, подходы, решение сложных задач",
+      "required": true
+    },
+    "blogArticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-article.blog-article"
+    }
+  },
   "config": {}
 }

@@ -270,7 +270,18 @@ export interface WidgetsBlogPosts extends Struct.ComponentSchema {
     displayName: 'BlogPosts';
     icon: 'book';
   };
-  attributes: {};
+  attributes: {
+    blogArticles: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-article.blog-article'
+    >;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0414\u0435\u043B\u0438\u043C\u0441\u044F \u0437\u043D\u0430\u043D\u0438\u044F\u043C\u0438 \u0438\u0437 \u0440\u0435\u0430\u043B\u044C\u043D\u044B\u0445 \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432: \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438, \u043F\u043E\u0434\u0445\u043E\u0434\u044B, \u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u0441\u043B\u043E\u0436\u043D\u044B\u0445 \u0437\u0430\u0434\u0430\u0447'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u042D\u043A\u0441\u043F\u0435\u0440\u0442\u0438\u0437\u0430 \u0438 \u043E\u043F\u044B\u0442'>;
+  };
 }
 
 export interface WidgetsBusinessProblems extends Struct.ComponentSchema {
