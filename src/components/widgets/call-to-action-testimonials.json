@@ -18,8 +18,9 @@
     },
     "testimonials": {
       "type": "component",
-      "component": "shared.testimonial",
-      "repeatable": true
+      "component": "shared.text",
+      "repeatable": true,
+      "required": true
     },
     "button": {
       "type": "component",

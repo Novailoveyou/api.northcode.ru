@@ -416,7 +416,8 @@ export interface WidgetsCallToActionTestimonials
     description: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u0421\u0432\u044F\u0436\u0438\u0442\u0435\u0441\u044C \u0441 \u043D\u0430\u043C\u0438 \u0434\u043B\u044F \u043E\u0431\u0441\u0443\u0436\u0434\u0435\u043D\u0438\u044F \u0432\u0430\u0448\u0435\u0439 \u0437\u0430\u0434\u0430\u0447\u0438. \u041C\u044B \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u0440\u0435\u0448\u0435\u043D\u0438\u0435, \u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u043F\u043E\u043C\u043E\u0436\u0435\u0442 \u0432\u0430\u0448\u0435\u043C\u0443 \u0431\u0438\u0437\u043D\u0435\u0441\u0443 \u0440\u0430\u0441\u0442\u0438 \u0438 \u0440\u0430\u0437\u0432\u0438\u0432\u0430\u0442\u044C\u0441\u044F.'>;
-    testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
+    testimonials: Schema.Attribute.Component<'shared.text', true> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'\u0413\u043E\u0442\u043E\u0432\u044B \u043D\u0430\u0447\u0430\u0442\u044C \u0432\u0430\u0448 \u043F\u0440\u043E\u0435\u043A\u0442?'>;
@@ -529,7 +530,7 @@ export interface WidgetsHowSystemLooks extends Struct.ComponentSchema {
     icon: 'rocket';
   };
   attributes: {
-    items: Schema.Attribute.Component<'shared.how-system-looks-item', false> &
+    items: Schema.Attribute.Component<'shared.how-system-looks-item', true> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
