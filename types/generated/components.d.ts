@@ -583,6 +583,18 @@ export interface WidgetsLeadFormSection extends Struct.ComponentSchema {
   };
 }
 
+export interface WidgetsLeadFormSectionWIthEnterSubmit
+  extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_lead_form_section_w_ith_enter_submits';
+  info: {
+    displayName: 'LeadFormSectionWIthEnterSubmit';
+    icon: 'alien';
+  };
+  attributes: {
+    form: Schema.Attribute.Relation<'oneToOne', 'api::form.form'>;
+  };
+}
+
 export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
   collectionName: 'components_widgets_meet_the_teams';
   info: {
@@ -969,6 +981,7 @@ declare module '@strapi/strapi' {
       'widgets.how-we-work': WidgetsHowWeWork;
       'widgets.integration-process': WidgetsIntegrationProcess;
       'widgets.lead-form-section': WidgetsLeadFormSection;
+      'widgets.lead-form-section-w-ith-enter-submit': WidgetsLeadFormSectionWIthEnterSubmit;
       'widgets.meet-the-team': WidgetsMeetTheTeam;
       'widgets.our-approach': WidgetsOurApproach;
       'widgets.primary-hero': WidgetsPrimaryHero;

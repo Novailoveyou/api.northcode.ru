@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_widgets_lead_form_section_w_ith_enter_submits",
+  "info": {
+    "displayName": "LeadFormSectionWIthEnterSubmit",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::form.form"
+    }
+  },
+  "config": {}
+}
