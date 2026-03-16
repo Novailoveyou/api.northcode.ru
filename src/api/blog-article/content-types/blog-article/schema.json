@@ -154,7 +154,8 @@
         "widgets.consent",
         "widgets.certified-it-company",
         "widgets.business-problems",
-        "widgets.blog-posts"
+        "widgets.blog-posts",
+        "widgets.lead-form-section-w-ith-enter-submit"
       ]
     }
   }

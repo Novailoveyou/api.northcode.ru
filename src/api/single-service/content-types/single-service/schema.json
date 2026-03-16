@@ -110,7 +110,8 @@
         "widgets.consent",
         "widgets.certified-it-company",
         "widgets.blog-posts",
-        "widgets.blog-article"
+        "widgets.blog-article",
+        "widgets.lead-form-section-w-ith-enter-submit"
       ]
     }
   }

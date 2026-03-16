@@ -50,7 +50,26 @@
         "widgets.certified-it-company",
         "widgets.call-to-action",
         "widgets.call-to-action-testimonials",
-        "widgets.call-to-action-question"
+        "widgets.call-to-action-question",
+        "widgets.terms",
+        "widgets.service-testimonials",
+        "widgets.service-products",
+        "widgets.service-hero-mobile-apps",
+        "widgets.service-hero-messenger-apps",
+        "widgets.section-hero-web-platforms",
+        "widgets.section-hero-custom-erp",
+        "widgets.section-hero-crm-automation",
+        "widgets.section-hero-ai-agents",
+        "widgets.privacy",
+        "widgets.lead-form-section-w-ith-enter-submit",
+        "widgets.integration-process",
+        "widgets.how-system-looks",
+        "widgets.home-hero",
+        "widgets.contact",
+        "widgets.consent",
+        "widgets.business-problems",
+        "widgets.blog-posts",
+        "widgets.blog-article"
       ]
     }
   }

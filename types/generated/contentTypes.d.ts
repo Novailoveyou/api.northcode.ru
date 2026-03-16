@@ -472,6 +472,25 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
         'widgets.call-to-action',
         'widgets.call-to-action-testimonials',
         'widgets.call-to-action-question',
+        'widgets.terms',
+        'widgets.service-testimonials',
+        'widgets.service-products',
+        'widgets.service-hero-mobile-apps',
+        'widgets.service-hero-messenger-apps',
+        'widgets.section-hero-web-platforms',
+        'widgets.section-hero-custom-erp',
+        'widgets.section-hero-crm-automation',
+        'widgets.section-hero-ai-agents',
+        'widgets.privacy',
+        'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.integration-process',
+        'widgets.how-system-looks',
+        'widgets.home-hero',
+        'widgets.contact',
+        'widgets.consent',
+        'widgets.business-problems',
+        'widgets.blog-posts',
+        'widgets.blog-article',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -647,6 +666,7 @@ export interface ApiBlogArticleBlogArticle extends Struct.CollectionTypeSchema {
         'widgets.certified-it-company',
         'widgets.business-problems',
         'widgets.blog-posts',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -748,6 +768,7 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
         'widgets.certified-it-company',
         'widgets.business-problems',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -873,6 +894,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1049,6 +1071,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1171,6 +1194,7 @@ export interface ApiLegalConsentLegalConsent extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1253,6 +1277,7 @@ export interface ApiLegalPrivacyLegalPrivacy extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1335,6 +1360,7 @@ export interface ApiLegalTermLegalTerm extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1631,6 +1657,7 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1789,6 +1816,7 @@ export interface ApiSingleServiceSingleService
         'widgets.certified-it-company',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.lead-form-section-w-ith-enter-submit',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
