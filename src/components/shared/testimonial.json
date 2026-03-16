@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_testimonials",
+  "info": {
+    "displayName": "testimonial",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "70+",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Проектов",
+      "required": true
+    }
+  },
+  "config": {}
+}

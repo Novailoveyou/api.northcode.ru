@@ -5,6 +5,39 @@
     "icon": "information"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Наш подход",
+      "required": true
+    },
+    "textHighlight": {
+      "type": "string",
+      "default": "Результаты нашей работы в цифрах",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "default": "Реальная статистика проектов. Системы, которые приносят измеримый результат бизнесу.",
+      "required": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false,
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": true
+    },
+    "testimonial": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": false,
+      "required": true
+    }
+  },
   "config": {}
 }

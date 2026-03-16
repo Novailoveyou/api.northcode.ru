@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_team_members",
+  "info": {
+    "displayName": "TeamMember",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Сергей Лебедев",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Генеральный директор, торговая сеть",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Миграция с устаревшей системы на современную ERP за 3 месяца. Без потери данных. Обучили персонал. Работает стабильно уже год. ",
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

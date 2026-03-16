@@ -5,6 +5,12 @@
     "icon": "information"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "default": "Российская IT компания. Работаем по стандартам ISO 9126 «Software Engineering — Product Quality» и IEEE 829−1998 «Standard for Software Test Documentation». Система менеджмента качества сертифицирована по стандарту ISO 9001:2015",
+      "required": true
+    }
+  },
   "config": {}
 }

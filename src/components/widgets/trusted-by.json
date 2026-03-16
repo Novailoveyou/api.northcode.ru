@@ -5,6 +5,18 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Нам доверяют",
+      "required": true
+    },
+    "images": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": true,
+      "required": true
+    }
+  },
   "config": {}
 }

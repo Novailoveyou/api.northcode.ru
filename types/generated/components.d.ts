@@ -18,6 +18,32 @@ export interface FeaturesQuiz extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface SharedButton extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buttons';
+  info: {
+    displayName: 'button';
+    icon: 'alien';
+  };
+  attributes: {
+    text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u0432\u044F\u0437\u0430\u0442\u044C\u0441\u044F'>;
+  };
+}
+
+export interface SharedInput extends Struct.ComponentSchema {
+  collectionName: 'components_shared_inputs';
+  info: {
+    displayName: 'input';
+    icon: 'alien';
+  };
+  attributes: {
+    placeholder: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'@username \u0438\u043B\u0438 \u043D\u043E\u043C\u0435\u0440 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0430'>;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -164,6 +190,42 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTeamMember extends Struct.ComponentSchema {
+  collectionName: 'components_shared_team_members';
+  info: {
+    displayName: 'TeamMember';
+    icon: 'alien';
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041C\u0438\u0433\u0440\u0430\u0446\u0438\u044F \u0441 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0448\u0435\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u044B \u043D\u0430 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u0443\u044E ERP \u0437\u0430 3 \u043C\u0435\u0441\u044F\u0446\u0430. \u0411\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u0438 \u0434\u0430\u043D\u043D\u044B\u0445. \u041E\u0431\u0443\u0447\u0438\u043B\u0438 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B. \u0420\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E \u0443\u0436\u0435 \u0433\u043E\u0434. '>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u0435\u0440\u0433\u0435\u0439 \u041B\u0435\u0431\u0435\u0434\u0435\u0432'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0413\u0435\u043D\u0435\u0440\u0430\u043B\u044C\u043D\u044B\u0439 \u0434\u0438\u0440\u0435\u043A\u0442\u043E\u0440, \u0442\u043E\u0440\u0433\u043E\u0432\u0430\u044F \u0441\u0435\u0442\u044C'>;
+  };
+}
+
+export interface SharedTestimonial extends Struct.ComponentSchema {
+  collectionName: 'components_shared_testimonials';
+  info: {
+    displayName: 'testimonial';
+    icon: 'alien';
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u043E\u0435\u043A\u0442\u043E\u0432'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'70+'>;
+  };
+}
+
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
@@ -208,7 +270,30 @@ export interface WidgetsCallToAction extends Struct.ComponentSchema {
     displayName: 'CallToAction';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.button', false> &
+      Schema.Attribute.Required;
+    input: Schema.Attribute.Component<'shared.input', false> &
+      Schema.Attribute.Required;
+    text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u2014 \u043E\u0442\u0432\u0435\u0442\u0438\u043C \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 15-\u0438 \u043C\u0438\u043D\u0443\u0442'>;
+    textAbove: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0411\u044B\u0441\u0442\u0440\u044B\u0439 \u043E\u0442\u0432\u0435\u0442'>;
+    textBelow: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0421\u0442\u0430\u0442\u0443\u0441:'>;
+    textBelowHighlight: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041E\u041D\u041B\u0410\u0419\u041D'>;
+    textBelowSmall: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0417\u0430\u0449\u0438\u0449\u0451\u043D\u043D\u043E\u0435 \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0435'>;
+    textHighlight: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435'>;
+  };
 }
 
 export interface WidgetsCallToActionQuestion extends Struct.ComponentSchema {
@@ -236,7 +321,11 @@ export interface WidgetsCertifiedItCompany extends Struct.ComponentSchema {
     displayName: 'CertifiedITCompany';
     icon: 'information';
   };
-  attributes: {};
+  attributes: {
+    text: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u043E\u0441\u0441\u0438\u0439\u0441\u043A\u0430\u044F IT \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F. \u0420\u0430\u0431\u043E\u0442\u0430\u0435\u043C \u043F\u043E \u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u0430\u043C ISO 9126 \u00ABSoftware Engineering \u2014 Product Quality\u00BB \u0438 IEEE 829\u22121998 \u00ABStandard for Software Test Documentation\u00BB. \u0421\u0438\u0441\u0442\u0435\u043C\u0430 \u043C\u0435\u043D\u0435\u0434\u0436\u043C\u0435\u043D\u0442\u0430 \u043A\u0430\u0447\u0435\u0441\u0442\u0432\u0430 \u0441\u0435\u0440\u0442\u0438\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u0430 \u043F\u043E \u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u0443 ISO 9001:2015'>;
+  };
 }
 
 export interface WidgetsConsent extends Struct.ComponentSchema {
@@ -326,7 +415,12 @@ export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
     displayName: 'MeetTheTeam';
     icon: 'information';
   };
-  attributes: {};
+  attributes: {
+    teamMembers: Schema.Attribute.Component<'shared.team-member', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041D\u0430\u0448\u0430 \u043A\u043E\u043C\u0430\u043D\u0434\u0430'>;
+  };
 }
 
 export interface WidgetsMoreServices extends Struct.ComponentSchema {
@@ -344,7 +438,22 @@ export interface WidgetsOurApproach extends Struct.ComponentSchema {
     displayName: 'OurApproach';
     icon: 'information';
   };
-  attributes: {};
+  attributes: {
+    button: Schema.Attribute.Component<'shared.link', false> &
+      Schema.Attribute.Required;
+    testimonial: Schema.Attribute.Component<'shared.testimonial', false> &
+      Schema.Attribute.Required;
+    testimonials: Schema.Attribute.Component<'shared.testimonial', true>;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0435\u0430\u043B\u044C\u043D\u0430\u044F \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u043E\u0432. \u0421\u0438\u0441\u0442\u0435\u043C\u044B, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u0440\u0438\u043D\u043E\u0441\u044F\u0442 \u0438\u0437\u043C\u0435\u0440\u0438\u043C\u044B\u0439 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 \u0431\u0438\u0437\u043D\u0435\u0441\u0443.'>;
+    textHighlight: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B \u043D\u0430\u0448\u0435\u0439 \u0440\u0430\u0431\u043E\u0442\u044B \u0432 \u0446\u0438\u0444\u0440\u0430\u0445'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041D\u0430\u0448 \u043F\u043E\u0434\u0445\u043E\u0434'>;
+  };
 }
 
 export interface WidgetsPrimaryHero extends Struct.ComponentSchema {
@@ -504,7 +613,13 @@ export interface WidgetsTrustedBy extends Struct.ComponentSchema {
     displayName: 'TrustedBy';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    images: Schema.Attribute.Component<'shared.media', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041D\u0430\u043C \u0434\u043E\u0432\u0435\u0440\u044F\u044E\u0442'>;
+  };
 }
 
 export interface WidgetsWhoWeAre extends Struct.ComponentSchema {
@@ -513,7 +628,14 @@ export interface WidgetsWhoWeAre extends Struct.ComponentSchema {
     displayName: 'WhoWeAre';
     icon: 'information';
   };
-  attributes: {};
+  attributes: {
+    highlightText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0420\u043E\u0441\u0441\u0438\u0439\u0441\u043A\u0430\u044F IT \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u044F \u041E\u041E\u041E \u041D\u041E\u0420\u0424\u041A\u041E\u0414'>;
+    text: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u043C \u0445\u0430\u043E\u0441 \u0431\u0438\u0437\u043D\u0435\u0441-\u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0432 \u0432 \u0441\u0442\u0440\u043E\u0439\u043D\u044B\u0435 \u0441\u0438\u0441\u0442\u0435\u043C\u044B, \u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0430\u044E\u0442 \u0432\u0430\u0448\u0435 \u0432\u0440\u0435\u043C\u044F, \u0443\u043C\u043D\u043E\u0436\u0430\u044E\u0442 \u043F\u0440\u0438\u0431\u044B\u043B\u044C \u0438 \u0434\u0430\u044E\u0442 \u043F\u043E\u043B\u043D\u044B\u0439 \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u044C \u043D\u0430\u0434 \u043A\u0430\u0436\u0434\u044B\u043C \u044D\u0442\u0430\u043F\u043E\u043C \u0440\u0430\u0431\u043E\u0442\u044B \u2014 \u043E\u0442 \u043F\u0435\u0440\u0432\u043E\u0439 \u0437\u0430\u044F\u0432\u043A\u0438 \u0434\u043E \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0433\u043E \u0440\u0443\u0431\u043B\u044F \u0432\u044B\u0440\u0443\u0447\u043A\u0438'>;
+  };
 }
 
 export interface WidgetsWhyWorkWithUs extends Struct.ComponentSchema {
@@ -522,7 +644,13 @@ export interface WidgetsWhyWorkWithUs extends Struct.ComponentSchema {
     displayName: 'WhyWorkWithUs';
     icon: 'alien';
   };
-  attributes: {};
+  attributes: {
+    testimonials: Schema.Attribute.Component<'shared.testimonial', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u043E\u0447\u0435\u043C\u0443 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u0441 \u043D\u0430\u043C\u0438'>;
+  };
 }
 
 declare module '@strapi/strapi' {
@@ -530,10 +658,14 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'features.lead-form': FeaturesLeadForm;
       'features.quiz': FeaturesQuiz;
+      'shared.button': SharedButton;
+      'shared.input': SharedInput;
       'shared.link': SharedLink;
       'shared.media': SharedMedia;
       'shared.robots': SharedRobots;
       'shared.seo': SharedSeo;
+      'shared.team-member': SharedTeamMember;
+      'shared.testimonial': SharedTestimonial;
       'shared.text': SharedText;
       'widgets.blog-article': WidgetsBlogArticle;
       'widgets.blog-posts': WidgetsBlogPosts;

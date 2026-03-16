@@ -5,6 +5,49 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "textAbove": {
+      "type": "string",
+      "default": "Быстрый ответ",
+      "required": true
+    },
+    "textHighlight": {
+      "type": "string",
+      "default": "Напишите",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "default": "— ответим в течение 15-и минут",
+      "required": true
+    },
+    "textBelow": {
+      "type": "string",
+      "default": "Статус:",
+      "required": true
+    },
+    "textBelowHighlight": {
+      "type": "string",
+      "default": "ОНЛАЙН",
+      "required": true
+    },
+    "textBelowSmall": {
+      "type": "string",
+      "default": "Защищённое соединение",
+      "required": true
+    },
+    "button": {
+      "type": "component",
+      "component": "shared.button",
+      "repeatable": false,
+      "required": true
+    },
+    "input": {
+      "type": "component",
+      "component": "shared.input",
+      "repeatable": false,
+      "required": true
+    }
+  },
   "config": {}
 }

@@ -5,6 +5,17 @@
     "icon": "information"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Наша команда",
+      "required": true
+    },
+    "teamMembers": {
+      "type": "component",
+      "component": "shared.team-member",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

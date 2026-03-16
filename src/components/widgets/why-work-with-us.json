@@ -5,6 +5,18 @@
     "icon": "alien"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Почему разработка с нами",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial",
+      "repeatable": true,
+      "required": true
+    }
+  },
   "config": {}
 }

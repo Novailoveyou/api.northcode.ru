@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_inputs",
+  "info": {
+    "displayName": "input",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "placeholder": {
+      "type": "string",
+      "default": "@username или номер телефона",
+      "required": true
+    }
+  },
+  "config": {}
+}
