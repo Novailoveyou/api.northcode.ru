@@ -491,6 +491,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-posts',
         'widgets.blog-article',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -769,6 +770,7 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
         'widgets.business-problems',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -895,6 +897,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1072,6 +1075,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1195,6 +1199,7 @@ export interface ApiLegalConsentLegalConsent extends Struct.SingleTypeSchema {
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1278,6 +1283,7 @@ export interface ApiLegalPrivacyLegalPrivacy extends Struct.SingleTypeSchema {
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1361,6 +1367,7 @@ export interface ApiLegalTermLegalTerm extends Struct.SingleTypeSchema {
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1658,6 +1665,7 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
@@ -1817,6 +1825,7 @@ export interface ApiSingleServiceSingleService
         'widgets.blog-posts',
         'widgets.blog-article',
         'widgets.lead-form-section-w-ith-enter-submit',
+        'widgets.services-alt',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{

@@ -876,6 +876,23 @@ export interface WidgetsServices extends Struct.ComponentSchema {
   };
 }
 
+export interface WidgetsServicesAlt extends Struct.ComponentSchema {
+  collectionName: 'components_widgets_services_alts';
+  info: {
+    displayName: 'ServicesAlt';
+    icon: 'alien';
+  };
+  attributes: {
+    services: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::single-service.single-service'
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0423\u0441\u043B\u0443\u0433\u0438'>;
+  };
+}
+
 export interface WidgetsTechnologies extends Struct.ComponentSchema {
   collectionName: 'components_widgets_technologies';
   info: {
@@ -1001,6 +1018,7 @@ declare module '@strapi/strapi' {
       'widgets.service-products': WidgetsServiceProducts;
       'widgets.service-testimonials': WidgetsServiceTestimonials;
       'widgets.services': WidgetsServices;
+      'widgets.services-alt': WidgetsServicesAlt;
       'widgets.technologies': WidgetsTechnologies;
       'widgets.terms': WidgetsTerms;
       'widgets.trusted-by': WidgetsTrustedBy;

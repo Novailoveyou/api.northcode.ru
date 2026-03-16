@@ -69,7 +69,8 @@
         "widgets.business-problems",
         "widgets.blog-posts",
         "widgets.blog-article",
-        "widgets.lead-form-section-w-ith-enter-submit"
+        "widgets.lead-form-section-w-ith-enter-submit",
+        "widgets.services-alt"
       ]
     }
   }

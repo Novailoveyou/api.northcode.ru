@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_widgets_services_alts",
+  "info": {
+    "displayName": "ServicesAlt",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Услуги",
+      "required": true
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::single-service.single-service"
+    }
+  },
+  "config": {}
+}

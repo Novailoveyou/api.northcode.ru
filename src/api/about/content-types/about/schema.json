@@ -69,7 +69,8 @@
         "widgets.consent",
         "widgets.business-problems",
         "widgets.blog-posts",
-        "widgets.blog-article"
+        "widgets.blog-article",
+        "widgets.services-alt"
       ]
     }
   }
