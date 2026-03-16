@@ -532,15 +532,6 @@ export interface WidgetsMeetTheTeam extends Struct.ComponentSchema {
   };
 }
 
-export interface WidgetsMoreServices extends Struct.ComponentSchema {
-  collectionName: 'components_widgets_more_services';
-  info: {
-    displayName: 'MoreServices';
-    icon: 'rocket';
-  };
-  attributes: {};
-}
-
 export interface WidgetsOurApproach extends Struct.ComponentSchema {
   collectionName: 'components_widgets_our_approaches';
   info: {
@@ -836,7 +827,6 @@ declare module '@strapi/strapi' {
       'widgets.integration-process': WidgetsIntegrationProcess;
       'widgets.lead-form-section': WidgetsLeadFormSection;
       'widgets.meet-the-team': WidgetsMeetTheTeam;
-      'widgets.more-services': WidgetsMoreServices;
       'widgets.our-approach': WidgetsOurApproach;
       'widgets.primary-hero': WidgetsPrimaryHero;
       'widgets.privacy': WidgetsPrivacy;

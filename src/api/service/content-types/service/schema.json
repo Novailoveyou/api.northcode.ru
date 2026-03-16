@@ -34,7 +34,6 @@
       },
       "components": [
         "widgets.services",
-        "widgets.more-services",
         "widgets.call-to-action",
         "widgets.call-to-action-testimonials",
         "widgets.call-to-action-question",
