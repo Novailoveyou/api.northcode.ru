@@ -26,6 +26,11 @@
       "component": "shared.link",
       "repeatable": false,
       "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial-with-media",
+      "repeatable": true
     }
   },
   "config": {}
