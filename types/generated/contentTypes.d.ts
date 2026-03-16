@@ -1510,6 +1510,67 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSingleContactSingleContact
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'single_contacts';
+  info: {
+    displayName: 'SingleContact';
+    pluralName: 'single-contacts';
+    singularName: 'single-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'\u041E\u043D\u043B\u0430\u0439\u043D'>;
+    icon: Schema.Attribute.Component<'shared.media', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'Telegram'>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::single-contact.single-contact'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    value: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'@northcode_ru'>;
+  };
+}
+
 export interface ApiSingleServiceSingleService
   extends Struct.CollectionTypeSchema {
   collectionName: 'single_services';
@@ -2333,6 +2394,7 @@ declare module '@strapi/strapi' {
       'api::quiz.quiz': ApiQuizQuiz;
       'api::review.review': ApiReviewReview;
       'api::service.service': ApiServiceService;
+      'api::single-contact.single-contact': ApiSingleContactSingleContact;
       'api::single-service.single-service': ApiSingleServiceSingleService;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
       'api::technology.technology': ApiTechnologyTechnology;

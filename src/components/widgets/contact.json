@@ -5,6 +5,17 @@
     "icon": "phone"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Контакты",
+      "required": true
+    },
+    "contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::single-contact.single-contact"
+    }
+  },
   "config": {}
 }

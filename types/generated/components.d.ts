@@ -381,7 +381,15 @@ export interface WidgetsContact extends Struct.ComponentSchema {
     displayName: 'Contact';
     icon: 'phone';
   };
-  attributes: {};
+  attributes: {
+    contacts: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::single-contact.single-contact'
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B'>;
+  };
 }
 
 export interface WidgetsFaQ extends Struct.ComponentSchema {
