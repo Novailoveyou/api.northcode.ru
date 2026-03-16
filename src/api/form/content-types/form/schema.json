@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Расскажите о своём проекте",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Оставьте заявку — свяжемся в течение 15-и минут. Обсудим вашу задачу, предложим решение и рассчитаем сроки. Первая консультация бесплатно",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.testimonial",
+      "repeatable": true,
+      "required": false
+    },
+    "contacts": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.testimonial-with-media",
+      "repeatable": true
+    },
+    "nameInput": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.input",
+      "repeatable": false,
+      "required": false
+    },
+    "budgetInput": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.input",
+      "repeatable": false
+    },
+    "phoneNumberInput": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.input",
+      "repeatable": false,
+      "required": true
+    },
+    "emailInput": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.input",
+      "repeatable": false
+    },
+    "descriptionInput": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.input",
+      "repeatable": false
+    },
+    "button": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.button",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}
