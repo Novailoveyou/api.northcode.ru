@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_testimonial_with_medias",
+  "info": {
+    "displayName": "testimonialWithMedia",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Проектируем систему, а не просто интерфейс",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "default": "Мы не делаем «красивый сайт». Мы выстраиваем цифровую архитектуру: процессы, роли, интеграции, аналитику. Каждый проект — это инструмент масштабирования бизнеса, а не витрина.",
+      "required": true
+    },
+    "icon": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false,
+      "required": false
+    },
+    "image": {
+      "type": "component",
+      "component": "shared.media",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}

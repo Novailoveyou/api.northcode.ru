@@ -226,6 +226,24 @@ export interface SharedTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTestimonialWithMedia extends Struct.ComponentSchema {
+  collectionName: 'components_shared_testimonial_with_medias';
+  info: {
+    displayName: 'testimonialWithMedia';
+    icon: 'alien';
+  };
+  attributes: {
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041C\u044B \u043D\u0435 \u0434\u0435\u043B\u0430\u0435\u043C \u00AB\u043A\u0440\u0430\u0441\u0438\u0432\u044B\u0439 \u0441\u0430\u0439\u0442\u00BB. \u041C\u044B \u0432\u044B\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043C \u0446\u0438\u0444\u0440\u043E\u0432\u0443\u044E \u0430\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0443: \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B, \u0440\u043E\u043B\u0438, \u0438\u043D\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u0438, \u0430\u043D\u0430\u043B\u0438\u0442\u0438\u043A\u0443. \u041A\u0430\u0436\u0434\u044B\u0439 \u043F\u0440\u043E\u0435\u043A\u0442 \u2014 \u044D\u0442\u043E \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u0431\u0438\u0437\u043D\u0435\u0441\u0430, \u0430 \u043D\u0435 \u0432\u0438\u0442\u0440\u0438\u043D\u0430.'>;
+    icon: Schema.Attribute.Component<'shared.media', false>;
+    image: Schema.Attribute.Component<'shared.media', false>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u0443\u0435\u043C \u0441\u0438\u0441\u0442\u0435\u043C\u0443, \u0430 \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441'>;
+  };
+}
+
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
@@ -382,7 +400,18 @@ export interface WidgetsHowAreWeDifferent extends Struct.ComponentSchema {
     displayName: 'HowAreWeDifferent';
     icon: 'information';
   };
-  attributes: {};
+  attributes: {
+    aboveTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u041D\u0430\u0441\u0442\u043E\u044F\u0449\u0430\u044F \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430. \u0420\u0435\u0430\u043B\u044C\u043D\u044B\u0435 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B.'>;
+    testimonials: Schema.Attribute.Component<
+      'shared.testimonial-with-media',
+      true
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0427\u0435\u043C \u043E\u0442\u043B\u0438\u0447\u0430\u0435\u043C\u0441\u044F \u043E\u0442 \u0448\u0430\u0431\u043B\u043E\u043D\u043D\u044B\u0445 \u0441\u0442\u0443\u0434\u0438\u0439'>;
+  };
 }
 
 export interface WidgetsHowSystemLooks extends Struct.ComponentSchema {
@@ -400,7 +429,18 @@ export interface WidgetsHowWeWork extends Struct.ComponentSchema {
     displayName: 'HowWeWork';
     icon: 'house';
   };
-  attributes: {};
+  attributes: {
+    belowTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041F\u0440\u043E\u0446\u0435\u0441\u0441 \u0440\u0430\u0431\u043E\u0442\u044B'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u041A\u0430\u043A \u043C\u044B \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C'>;
+    workSteps: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::work-step.work-step'
+    >;
+  };
 }
 
 export interface WidgetsIntegrationProcess extends Struct.ComponentSchema {
@@ -609,7 +649,15 @@ export interface WidgetsServices extends Struct.ComponentSchema {
     displayName: 'Services';
     icon: 'rocket';
   };
-  attributes: {};
+  attributes: {
+    services: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::single-service.single-service'
+    >;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'\u0423\u0441\u043B\u0443\u0433\u0438'>;
+  };
 }
 
 export interface WidgetsTechnologies extends Struct.ComponentSchema {
@@ -688,6 +736,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.team-member': SharedTeamMember;
       'shared.testimonial': SharedTestimonial;
+      'shared.testimonial-with-media': SharedTestimonialWithMedia;
       'shared.text': SharedText;
       'widgets.blog-article': WidgetsBlogArticle;
       'widgets.blog-posts': WidgetsBlogPosts;

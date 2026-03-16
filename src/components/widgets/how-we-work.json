@@ -5,6 +5,22 @@
     "icon": "house"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Как мы работаем",
+      "required": true
+    },
+    "belowTitle": {
+      "type": "string",
+      "default": "Процесс работы",
+      "required": true
+    },
+    "workSteps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-step.work-step"
+    }
+  },
   "config": {}
 }

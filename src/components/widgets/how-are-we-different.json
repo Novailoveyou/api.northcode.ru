@@ -5,6 +5,23 @@
     "icon": "information"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "aboveTitle": {
+      "type": "string",
+      "default": "Настоящая разработка. Реальные результаты.",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "default": "Чем отличаемся от шаблонных студий",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "shared.testimonial-with-media",
+      "repeatable": true,
+      "required": true
+    }
+  },
   "config": {}
 }

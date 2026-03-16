@@ -1579,6 +1579,82 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiWorkStepWorkStep extends Struct.CollectionTypeSchema {
+  collectionName: 'work_steps';
+  info: {
+    displayName: 'WorkStep';
+    pluralName: 'work-steps';
+    singularName: 'work-step';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    belowTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'\u0413\u043B\u0443\u0431\u043E\u043A\u043E\u0435 \u043F\u043E\u0433\u0440\u0443\u0436\u0435\u043D\u0438\u0435 \u0432 \u0432\u0430\u0448 \u0431\u0438\u0437\u043D\u0435\u0441'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'\u0418\u0437\u0443\u0447\u0430\u0435\u043C \u0431\u0438\u0437\u043D\u0435\u0441-\u0446\u0435\u043B\u0438, \u0446\u0435\u043B\u0435\u0432\u0443\u044E \u0430\u0443\u0434\u0438\u0442\u043E\u0440\u0438\u044E \u0438 \u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0442\u0440\u0435\u0431\u043E\u0432\u0430\u043D\u0438\u044F. \u0424\u043E\u0440\u043C\u0438\u0440\u0443\u0435\u043C \u0434\u0435\u0442\u0430\u043B\u044C\u043D\u0443\u044E \u0434\u043E\u0440\u043E\u0436\u043D\u0443\u044E \u043A\u0430\u0440\u0442\u0443 \u043F\u0440\u043E\u0435\u043A\u0442\u0430 \u0441 \u043F\u043E\u043D\u044F\u0442\u043D\u044B\u043C\u0438 \u044D\u0442\u0430\u043F\u0430\u043C\u0438 \u0438 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430\u043C\u0438.'>;
+    duration: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'1-2 \u043D\u0435\u0434\u0435\u043B\u0438'>;
+    image: Schema.Attribute.Component<'shared.media', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::work-step.work-step'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonials: Schema.Attribute.Component<'shared.text', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'\u0410\u043D\u0430\u043B\u0438\u0442\u0438\u043A\u0430'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2106,6 +2182,7 @@ declare module '@strapi/strapi' {
       'api::service.service': ApiServiceService;
       'api::single-service.single-service': ApiSingleServiceSingleService;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
+      'api::work-step.work-step': ApiWorkStepWorkStep;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

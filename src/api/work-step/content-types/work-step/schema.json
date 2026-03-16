@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_steps",
+  "info": {
+    "singularName": "work-step",
+    "pluralName": "work-steps",
+    "displayName": "WorkStep"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Аналитика",
+      "required": true
+    },
+    "belowTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Глубокое погружение в ваш бизнес",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Изучаем бизнес-цели, целевую аудиторию и технические требования. Формируем детальную дорожную карту проекта с понятными этапами и результатами.",
+      "required": true
+    },
+    "testimonials": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.text",
+      "repeatable": true,
+      "required": true
+    },
+    "duration": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "1-2 недели",
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.media",
+      "repeatable": false
+    }
+  }
+}
