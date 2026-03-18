@@ -5,6 +5,7 @@
   "description": "A Strapi application",
   "scripts": {
     "build": "strapi build",
+    "docker:build": "docker build --build-arg NODE_ENV=production --build-arg STRAPI_URL=https://api.example.com -t mystrapiapp:latest -f Dockerfile.prod .",
     "console": "strapi console",
     "deploy": "strapi deploy",
     "dev": "strapi develop",
